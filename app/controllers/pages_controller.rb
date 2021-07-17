@@ -8,5 +8,6 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @goal = Goal.new
   end
 end
