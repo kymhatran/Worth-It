@@ -6,7 +6,12 @@ class PagesController < ApplicationController
 
   def transactions
     @transactions = UpApi.transactions
+    @accounts = UpApi.accounts
   end
+
+  # def accounts
+  #   @accounts = UpApi.accounts
+  # end
 
   def dashboard
     @goal = Goal.new
