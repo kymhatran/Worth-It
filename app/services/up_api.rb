@@ -15,7 +15,7 @@ class UpApi
       transactions[transaction[:id]] = {
         description: transaction[:attributes][:description],
         value: transaction[:attributes][:amount][:value],
-        tag: tag.empty? ? "yes" : tag[0][:id],
+        tag: tag.empty? ? "no tag" : tag[0][:id],
         date: transaction[:attributes][:createdAt]
       }
     end
@@ -23,9 +23,17 @@ class UpApi
   end
 
   def self.accounts
+    accounts = {}
     data = RestClient.get "https://api.up.com.au/api/v1/accounts",
             {:Authorization => "Bearer #{ENV['UP_API_KEY']}"}
+
+    response = JSON.parse(data, :symbolize_names => true)
+    response[:data].each do |account|
+      accounts[account[:id]] = {
+        display_name: account[:attributes][:displayName],
+        value: account[:attributes][:balance][:value]
+      }
+    end
+    accounts
   end
-
 end
-
