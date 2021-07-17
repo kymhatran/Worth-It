@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def transactions
+    @transactions = UpApi.transactions
   end
 
   def dashboard
