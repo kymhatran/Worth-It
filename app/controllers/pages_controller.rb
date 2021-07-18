@@ -9,5 +9,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @goal = Goal.new
+    @goal.build_reason
+    @goals = Goal.all
   end
 end
