@@ -1,1 +1,14 @@
-<h1>transactions</h1>
+<div class="card mb-3 mx-auto col-md-4 py-3 shadow-sm rounded">
+
+
+<h1>Your Transactions</h1>
+
+<% @transactions.each do |_key, transaction| %>
+<li> <%= transaction[:description] %>, <%= transaction[:value] %>, <%= transaction[:tag] %> </li>
+<% end %>
+
+<h1>Your Accounts</h1>
+<% @accounts.each do |_key, account| %>
+<li> <%= account[:display_name] %>, <%= account[:value] %> </li>
+<% end %>
+</div>
