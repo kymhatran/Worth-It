@@ -1,13 +1,17 @@
 require 'rest-client'
 require 'json'
 
+def api_call(url)
+  data = RestClient.get "https://api.up.com.au/api/v1/#{url}",
+            {:Authorization => "Bearer #{ENV['UP_API_KEY']}"}
+  JSON.parse(data, :symbolize_names => true)
+end
+
 class UpApi
 
   def self.transactions
     transactions = {}
-    data = RestClient.get "https://api.up.com.au/api/v1/transactions",
-              {:Authorization => "Bearer #{ENV['UP_API_KEY']}"}
-    response = JSON.parse(data, :symbolize_names => true)
+    response = api_call('transactions')
     response[:data].each do |transaction|
       tag = transaction[:relationships][:tags][:data]
       # parsed = DateTime.parse(transaction[:attributes][:createdAt])
@@ -24,10 +28,7 @@ class UpApi
 
   def self.accounts
     accounts = {}
-    data = RestClient.get "https://api.up.com.au/api/v1/accounts",
-            {:Authorization => "Bearer #{ENV['UP_API_KEY']}"}
-
-    response = JSON.parse(data, :symbolize_names => true)
+    response = api_call('accounts')
     response[:data].each do |account|
       accounts[account[:id]] = {
         display_name: account[:attributes][:displayName],
