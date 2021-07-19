@@ -40,18 +40,18 @@ ActiveRecord::Schema.define(version: 2021_07_18_044427) do
     t.string "name"
     t.date "due_date"
     t.integer "amount"
-    t.bigint "users_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["users_id"], name: "index_goals_on_users_id"
+    t.index ["user_id"], name: "index_goals_on_user_id"
   end
 
   create_table "reasons", force: :cascade do |t|
     t.text "description"
-    t.bigint "goals_id", null: false
+    t.bigint "goal_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["goals_id"], name: "index_reasons_on_goals_id"
+    t.index ["goal_id"], name: "index_reasons_on_goal_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -68,6 +68,6 @@ ActiveRecord::Schema.define(version: 2021_07_18_044427) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "goals", "users", column: "users_id"
-  add_foreign_key "reasons", "goals", column: "goals_id"
+  add_foreign_key "goals", "users"
+  add_foreign_key "reasons", "goals"
 end
