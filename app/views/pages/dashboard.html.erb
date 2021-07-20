@@ -6,7 +6,7 @@
 <h2>Your Goals</h2>
 <ul>
   <% @goals.each do |goal|%>
-   <li> <%= goal.name %>, <%= goal.reason.description if goal.reason.present? %></li>
+   <li> <%= goal.name %>, <%= goal.reason.description if goal.reason.present? %> - <%= goal.due_date %></li>
   <% end %>
 </ul>
 </div>

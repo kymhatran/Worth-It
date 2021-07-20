@@ -1,9 +1,10 @@
 <%= simple_form_for @goal do |f| %>
                   <%= f.input :name, label: "What is your savings goal?" %>
-                  <%= f.input :due_date, label: "When do you want to achieve this goal?" %>
+                  <%= f.input :due_date, id:'goal_due_date', as: :string,label: "When do you want to achieve this goal?" %>
                   <%= f.input :amount, label: "How much is it?"%>
                   <%= f.simple_fields_for :reason, Reason.new do |p| %>
                     <%= p.input :description, label: "Why are you saving for this goal?", placeholder: ["I need to avoid...a mid-life crisis", "I want to people to...be jealous of me", "I strive to be...financially secure"].sample%>
                     <% end %>
                   <%= f.submit "Hell Yeah", class: "btn btn-dark"%>
                 <% end %>
+
