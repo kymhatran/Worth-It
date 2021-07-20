@@ -7,6 +7,11 @@ def api_call(url)
   JSON.parse(data, :symbolize_names => true)
 end
 
+def parse_datetime(datetime)
+  temp = DateTime.parse(datetime)
+  temp.strftime("%d/%m/%y %H:%M %A")
+end
+
 class UpApi
 
   def self.transactions
@@ -20,7 +25,7 @@ class UpApi
         description: transaction[:attributes][:description],
         value: transaction[:attributes][:amount][:value],
         tag: tag.empty? ? "no tag" : tag[0][:id],
-        date: transaction[:attributes][:createdAt]
+        date: parse_datetime(transaction[:attributes][:createdAt])
       }
     end
     transactions
