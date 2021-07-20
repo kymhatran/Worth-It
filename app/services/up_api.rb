@@ -37,9 +37,25 @@ class UpApi
     response[:data].each do |account|
       accounts[account[:id]] = {
         display_name: account[:attributes][:displayName],
-        value: account[:attributes][:balance][:value]
+        value: account[:attributes][:balance][:value],
+        account_type: account[:attributes][:accountType]
       }
     end
     accounts
   end
+
+  def self.goal_saver
+    accounts = UpApi.accounts
+    savers = []
+    accounts.each do |account|
+      if account[1][:account_type] == "SAVER"
+        savers << account[1][:display_name]
+      end
+    end
+    savers
+  end
 end
+UpApi.accounts
+
+
+
