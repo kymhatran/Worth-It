@@ -2,5 +2,5 @@
 
  flatpickr('#goal_due_date',{
     altInput: true,
-    dateFormat: 'D-M-Y',
+    dateFormat: 'Y-M-D',
   });

@@ -3,11 +3,9 @@ class GoalsController < ApplicationController
     @user = current_user
     @goal = Goal.new(goal_params)
     @goal.user = @user
-    if @goal.save
-      redirect_to dashboard_path(current_user)
-    else
-      render :new
-    end
+    @goal.save
+
+    redirect_to dashboard_path(current_user)
   end
 
   def destroy
