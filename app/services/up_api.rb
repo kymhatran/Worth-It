@@ -12,6 +12,17 @@ def parse_datetime(datetime)
   temp.strftime("%d/%m/%y %H:%M %A")
 end
 
+def error(response)
+  case response.code
+  when 401
+    puts "Api key is wrong"
+  when 404
+    puts "Not sure"
+  when 500,502,503,504
+    puts "Somethings wrong with Up please try again later"
+  end
+end
+
 class UpApi
 
   def self.transactions
@@ -29,6 +40,8 @@ class UpApi
       }
     end
     transactions
+  rescue
+    error(response)
   end
 
   def self.accounts
@@ -37,11 +50,12 @@ class UpApi
     response[:data].each do |account|
       accounts[account[:id]] = {
         display_name: account[:attributes][:displayName],
-        value: account[:attributes][:balance][:value],
-        account_type: account[:attributes][:accountType]
+        value: account[:attributes][:balance][:value]
       }
     end
     accounts
+  rescue
+    error(response)
   end
 
   def self.goal_saver
@@ -55,7 +69,7 @@ class UpApi
     savers
   end
 end
-UpApi.accounts
+
 
 
 
