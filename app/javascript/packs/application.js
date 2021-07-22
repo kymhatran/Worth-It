@@ -3,6 +3,7 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 import {initflatpickr} from "./init_flatpickr.js"
+import {calculator} from "./purchase_creator.js"
 import {goal_saver} from "./goal_saver.js"
 
 require("@rails/ujs").start()
@@ -32,4 +33,5 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  calculator()
 });
