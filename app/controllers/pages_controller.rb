@@ -5,8 +5,8 @@ class PagesController < ApplicationController
   end
 
   def transactions
-    @transactions = UpApi.transactions
-    @accounts = UpApi.accounts
+    @transactions = UpApi.transactions(current_user.api_key)
+    @accounts = UpApi.accounts(current_user.api_key)
   end
 
   # def accounts
