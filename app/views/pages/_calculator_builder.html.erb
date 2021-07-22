@@ -1,0 +1,29 @@
+<!-- 1. Create form with correct names -->
+<!-- 2. Display weekly contribution figure -->
+<!-- 3. Add an ID to the form -->
+<!-- 4. In JS file, store weekly contribution in a variable -->
+<!-- 5. In JS file, select form and store two inputs (name and cost of the purchase) in a variable -->
+<!-- 6. In JS file, when submitting form prevent it from refreshing -->
+<!-- 6. In JS file, when on-submit event you want to execute (weekly contribution - cost of purchase)
+        - Determine how much sum of WC - COP impacts goal timeline
+        - Interpolate impact of goal timeline within reasons for saving
+        - Represent the sum of WC - COP visually
+        -->
+<div> This is your weekly contribution</div>
+<div id= "weekly-contribution"> 150 </div>
+<form id="purchase_form">
+  <label for="purchase">What do you want to buy?</label><br>
+  <input type="text" class="purchase" name="purchase"><br>
+  <label for="cost">How much does it cost?</label><br>
+  <input type="text" class="cost" name="cost">
+  <div>
+    <input type="submit" value="Submit">
+  </div>
+</form>
+<div>
+<div id= "impact"></div>
+  <ul>
+    <li id="setback"></li>
+    <li id="days_reason"></li>
+  </ul>
+</div>
