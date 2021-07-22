@@ -4,6 +4,7 @@
 // that code so it'll be compiled.
 import {initflatpickr} from "./init_flatpickr.js"
 import {calculator} from "./purchase_creator.js"
+import {goal_saver} from "./goal_saver.js"
 
 require("@rails/ujs").start()
 require("turbolinks").start()
