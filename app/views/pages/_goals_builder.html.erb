@@ -1,5 +1,6 @@
 <%= simple_form_for @goal do |f| %>
-                  <%= f.input :name, as: :select, collection: UpApi.goal_saver, prompt: 'Select Saver', label: "Please choose your UP Saver account!", :input_html => { id: "select" } %>
+                  <%= f.input :name, as: :select, collection: UpApi.goal_saver(current_user.api_key), prompt: 'Select Saver', label: "Please choose your UP Saver account!", :input_html => { id: "select" } %>
+                    <p id="result">Your balance</p>
                   <%= f.input :amount, label: "How much do you want to save?"%>
                   <%= f.input :due_date, id:'goal_due_date', as: :string,label: "When do you want to save it by?" %>
                   <%= f.simple_fields_for :reason, Reason.new do |p| %>

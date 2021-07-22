@@ -59,8 +59,8 @@ class UpApi
     error(response)
   end
 
-  def self.goal_saver
-    accounts = UpApi.accounts
+  def self.goal_saver(api_key)
+    accounts = UpApi.accounts(api_key)
     savers = {}
     accounts.each do |account|
       if account[1][:account_type] == "SAVER"
