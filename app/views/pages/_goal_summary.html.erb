@@ -1,9 +1,5 @@
-<% @goal_names = [] %>
-<% @goals.each do |goal| %>
-  <% if goal.user_id == current_user.id %>
-    <% @goal_names << goal %>
-  <% end %>
-<% end %>
+<% @goal_names = goal_names(@goals,current_user) %>
+
 <ul>
     <% @goal_names.each do |goal|%>
     <li id= "goal_name"> <%= goal.name %>,
