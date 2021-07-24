@@ -1,4 +1,5 @@
 class GoalsController < ApplicationController
+
   def create
     @user = current_user
     @goal = Goal.new(goal_params)
