@@ -6,8 +6,13 @@
 <h2>Your Goals</h2>
 <ul>
   <% @goals.each do |goal|%>
-   <li> <%= goal.name %>, <%= goal.reason.description if goal.reason.present? %> - <%= goal.due_date %></li>
+   <li id= "goal_name"> <%= goal.name %>,
+    <li id= "goal_reason"><%= goal.reason.description if goal.reason.present? %> </li>
+    <li id="due_date"> <%= goal.due_date %> </li>
   <% end %>
 </ul>
 </div>
-<%= render "calculator_builder" %>
+  <div class="card mb-3 mx-auto col-md-4 py-3 shadow-sm rounded">
+    <%= render "calculator_builder" %>
+  </div>
+
