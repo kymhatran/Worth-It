@@ -1,10 +1,8 @@
 <ul>
   <% @goals.each do |goal|%>
-    <li>
-      <%= goal.name %>,
-      <%= goal.reason.description if goal.reason.present? %> -
-      <%= goal.due_date %>
-      <%= weekly_contributions(goal, current_user.api_key) %>
-    </li>
+    <li id= "goal_name"> <%= goal.name %>,
+    <li id= "goal_reason"><%= goal.reason.description if goal.reason.present? %> </li>
+    <li id="due_date"> <%= goal.due_date %> </li>
+    <li><%= weekly_contributions(goal, current_user.api_key) %></li>
   <% end %>
 </ul>

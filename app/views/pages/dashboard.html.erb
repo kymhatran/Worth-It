@@ -1,18 +1,12 @@
 <h1>dashboard</h1>
 <div class="card mb-3 mx-auto col-md-4 py-3 shadow-sm rounded">
-<%= render "goals_builder" %>
+  <%= render "goals_builder" %>
 </div>
 <div class="card mb-3 mx-auto col-md-4 py-3 shadow-sm rounded">
-<h2>Your Goals</h2>
-<ul>
-  <% @goals.each do |goal|%>
-   <li id= "goal_name"> <%= goal.name %>,
-    <li id= "goal_reason"><%= goal.reason.description if goal.reason.present? %> </li>
-    <li id="due_date"> <%= goal.due_date %> </li>
-  <% end %>
-</ul>
+  <h2>Your Goals</h2>
+  <%= render "goals_summary" %>
 </div>
-  <div class="card mb-3 mx-auto col-md-4 py-3 shadow-sm rounded">
-    <%= render "calculator_builder" %>
-  </div>
+<div class="card mb-3 mx-auto col-md-4 py-3 shadow-sm rounded">
+  <%= render "calculator_builder" %>
+</div>
 
