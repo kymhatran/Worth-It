@@ -9,8 +9,9 @@
         - Interpolate impact of goal timeline within reasons for saving
         - Represent the sum of WC - COP visually
         -->
+<div class="card mb-3 mx-auto col-md-4 py-3 shadow-sm rounded">
 <div> This is your weekly contribution</div>
-<div id= "weekly-contribution"> 150 </div>
+<div id= "weekly-contribution"> <%= params[:param4] %> </div>
 <form id="purchase_form">
   <label for="purchase">What do you want to buy?</label><br>
   <input type="text" class="purchase" name="purchase"><br>
@@ -30,3 +31,13 @@
     </ul>
   <p id="visual"><p>
 </div>
+<%= link_to "Back To Dashboard", dashboard_path, class: "btn btn-dark" %>
+</div>
+
+<div id="goal_name" type="hidden" value="<%= params[:param1] %>" />
+<div id="due_date" type="hidden" value="<%= params[:param2] %>" />
+<div id="goal_reason" type="hidden" value="<%= params[:param3] %>" />
+
+<!-- Create divs for each param -->
+<!-- Hide them so users can't see on the browse -->
+<!-- Access them with JS so the calculator works -->

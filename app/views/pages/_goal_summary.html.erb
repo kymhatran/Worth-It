@@ -1,8 +1,26 @@
+<% @goal_names = [] %>
+<% @goals.each do |goal| %>
+  <% if goal.user_id == current_user.id %>
+    <% @goal_names << goal %>
+  <% end %>
+<% end %>
 <ul>
-  <% @goals.each do |goal|%>
+    <% @goal_names.each do |goal|%>
     <li id= "goal_name"> <%= goal.name %>,
     <li id= "goal_reason"><%= goal.reason.description if goal.reason.present? %> </li>
     <li id="due_date"> <%= goal.due_date %> </li>
-    <li><%= weekly_contributions(goal, current_user.api_key) %></li>
+    <% weeklyContribution = weekly_contributions(goal, current_user.api_key) %>
+    <li><%= weeklyContribution %> </li>
+    <%= link_to "Is It Worth It?", calculator_path(:param1 => "#{goal.name}",
+        :param2 => "#{goal.due_date}",
+        :param3 => "#{goal.reason.description}",
+        :param4 => "#{weeklyContribution}"),
+        class: "btn btn-warning" %>
   <% end %>
 </ul>
+
+
+
+
+
+

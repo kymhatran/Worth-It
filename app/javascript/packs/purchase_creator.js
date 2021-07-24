@@ -1,8 +1,5 @@
-const purchaseForm = document.getElementById("purchase_form");
-
-
 function calculator() {
-
+  const purchaseForm = document.getElementById("purchase_form");
     if (purchaseForm) {
       const weeklyContribution = document.getElementById("weekly-contribution").innerHTML
         purchaseForm.addEventListener('submit', (event) => {
@@ -13,8 +10,8 @@ function calculator() {
         const context = document.getElementById("context")
         const days_reason = document.getElementById("days_reason")
         const visual = document.getElementById("visual")
-        const goal_name = document.getElementById("goal_name").innerHTML
-        const goal_reason = document.getElementById("goal_reason").value
+        const goal_name = document.getElementById("goal_name").getAttribute("value")
+        const goal_reason = document.getElementById("goal_reason").getAttribute("goal_reason")
         const purchase = purchaseForm.querySelectorAll("input")[0].value
         const cost = purchaseForm.querySelectorAll("input")[1].value
 
