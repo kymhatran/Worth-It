@@ -1,5 +1,5 @@
-module ApplicationHelper
-    def goal_names(goals, user)
+module GoalNames
+  def goal_names(goals, user)
     goal_names = []
     goals.each do |goal|
       if goal.user_id == user.id
