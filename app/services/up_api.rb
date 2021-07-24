@@ -5,22 +5,13 @@ def api_call(url, api_key)
   data = RestClient.get "https://api.up.com.au/api/v1/#{url}",
             {:Authorization => "Bearer #{api_key}"}
   JSON.parse(data, :symbolize_names => true)
+rescue RestClient::ExceptionWithResponse => e
+  e.response
 end
 
 def parse_datetime(datetime)
   temp = DateTime.parse(datetime)
   temp.strftime("%d/%m/%y %H:%M %A")
-end
-
-def error(response)
-  case response.code
-  when 401
-    puts "Api key is wrong"
-  when 404
-    puts "Not sure"
-  when 500,502,503,504
-    puts "Somethings wrong with Up please try again later"
-  end
 end
 
 class UpApi
@@ -41,7 +32,7 @@ class UpApi
     end
     transactions
   rescue
-    error(response)
+    nil
   end
 
   def self.accounts(api_key)
@@ -56,7 +47,7 @@ class UpApi
     end
     accounts
   rescue
-    error(response)
+    nil
   end
 
   def self.goal_saver(api_key)
@@ -68,6 +59,8 @@ class UpApi
       end
     end
     savers
+  rescue
+    nil
   end
 end
 
