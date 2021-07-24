@@ -1,0 +1,10 @@
+<ul>
+  <% @goals.each do |goal|%>
+    <li>
+      <%= goal.name %>,
+      <%= goal.reason.description if goal.reason.present? %> -
+      <%= goal.due_date %>
+      <%= weekly_contributions(goal, current_user.api_key) %>
+    </li>
+  <% end %>
+</ul>
