@@ -2,8 +2,6 @@
 
 <% @goal_names = @goals.map{ |x| x.name } %>
 
-<%= @goal_names %>
-
 <select class="form-control select required" id="goal_form" name="goal[name]">
   <% UpApi.goal_saver(current_user.api_key).each do |key, value|%>
     <% if @goal_names.include? key %>
