@@ -1,5 +1,5 @@
 import { format } from 'date-fns'
-if (document.getElementById('#goal_form')) {
+if (document.getElementById('goal_form')) {
   const selectElement = document.querySelector('#goal_form');
 
   selectElement.addEventListener('change', (event) => {
