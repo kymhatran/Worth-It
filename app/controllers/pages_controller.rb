@@ -21,4 +21,10 @@ class PagesController < ApplicationController
 
   def calculator
   end
+
+  def goal_builder
+    @goal = Goal.new
+    @goal.build_reason
+    @goals = Goal.all
+  end
 end
