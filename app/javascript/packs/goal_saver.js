@@ -33,4 +33,3 @@ if (document.getElementById('goal_form')) {
     weeks.textContent = amount;
   });
 }
-
