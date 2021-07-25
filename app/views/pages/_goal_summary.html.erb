@@ -6,7 +6,7 @@
     <li id= "goal_reason"><%= goal.reason.description if goal.reason.present? %> </li>
     <li id="due_date"> <%= goal.due_date %> </li>
     <% weeklyContribution = weekly_contributions(goal, current_user.api_key) %>
-    <li><%= weeklyContribution %> </li>
+    <li>$<%= weeklyContribution %> </li>
     <%= link_to "Is It Worth It?", calculator_path(:param1 => "#{goal.name}",
         :param2 => "#{goal.due_date}",
         :param3 => "#{goal.reason.description}",

@@ -11,7 +11,7 @@ function calculator() {
         const days_reason = document.getElementById("days_reason")
         const visual = document.getElementById("visual")
         const goal_name = document.getElementById("goal_name").getAttribute("value")
-        const goal_reason = document.getElementById("goal_reason").getAttribute("goal_reason")
+        const goal_reason = document.getElementById("goal_reason").getAttribute("value")
         const purchase = purchaseForm.querySelectorAll("input")[0].value
         const cost = purchaseForm.querySelectorAll("input")[1].value
 
