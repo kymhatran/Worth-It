@@ -1,0 +1,35 @@
+<div class="p-3 mb-2 bg-primary">
+
+  <div class="card mb-3 mx-auto col-md-4 py-3 shadow-sm rounded">
+
+<%= simple_form_for @goal do |f| %>
+<% @goal_names = [] %>
+<% @goals.each do |goal| %>
+  <% if goal.user_id == current_user.id %>
+    <% @goal_names << goal.name %>
+  <% end %>
+<% end %>
+<select class="form-control select required" id="goal_form" name="goal[name]">
+  <option value="" disabled selected>Select your savings/goal</option>
+  <% UpApi.goal_saver(current_user.api_key).each do |key, value|%>
+    <% if @goal_names.include? key %>
+      <% next %>
+    <% else %>
+      <option value="<%= key %>" data-balance="<%= value %>"><%= key %></option>
+    <% end %>
+  <% end %>
+</select>
+                     <!--   f.input :name, as: :select, collection: UpApi.goal_saver(current_user.api_key), prompt: 'Select Saver', label: "Please choose your UP Saver account!", :input_html => { id: "select" } -->
+                        <p>Your Balance:</p>
+                        <p id="result"></p>
+                      <%= f.input :amount, label: "How much do you want to save?", :input_html => { id: "amount" }%>
+                      <%= f.input :due_date, id:'goal_due_date', as: :string,label: "When do you want to save it by?" %>
+                      <p id="weeks"></p>
+                      <%= f.simple_fields_for :reason, Reason.new do |p| %>
+                        <%= p.input :description, label: "Why are you saving for this goal?", placeholder: ["I need to avoid...a mid-life crisis", "I want to people to...be jealous of me", "I strive to be...financially secure"].sample%>
+                        <% end %>
+                      <%= f.submit "Hell Yeah", class: "btn btn-warning"%>
+                    <% end %>
+
+  </div>
+</div>
