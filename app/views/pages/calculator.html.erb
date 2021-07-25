@@ -10,8 +10,13 @@
         - Represent the sum of WC - COP visually
         -->
 <div class="card mb-3 mx-auto col-md-4 py-3 shadow-sm rounded">
-<div> This is your weekly contribution</div>
-<div id= "weekly-contribution"> <%= params[:param4] %> </div>
+  <div id="goal_name"><%= params[:param1] %></div>
+  <div id="due_date"><%= params[:param2] %></div>
+  <div id="goal_reason"><%= params[:param3] %></div>
+  <div class="d-flex">
+    <div> This is your weekly contribution: $</div>
+    <div id= "weekly-contribution"><%= params[:param4] %> </div>
+  </div>
 <form id="purchase_form">
   <label for="purchase">What do you want to buy?</label><br>
   <input type="text" class="purchase" name="purchase"><br>
