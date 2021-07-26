@@ -19,7 +19,7 @@
                     <p>Your Balance:</p>
                     <p id="result"></p>
                   <%= f.input :amount, label: "How much do you want to save?", :input_html => { id: "amount" }%>
-                  <%= f.input :due_date, id:'goal_due_date', as: :string,label: "When do you want to save it by?" %>
+                  <%= f.input :due_date, id:'goal_due_date', as: :string %>
                   <p id="weeks"></p>
                   <%= f.simple_fields_for :reason, Reason.new do |p| %>
                     <%= p.input :description, label: "Why are you saving for this goal?", placeholder: ["I need to avoid...a mid-life crisis", "I want to people to...be jealous of me", "I strive to be...financially secure"].sample%>
