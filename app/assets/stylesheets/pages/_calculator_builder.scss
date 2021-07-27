@@ -3,3 +3,67 @@
 ul {
   list-style: none;
 }
+
+.calc-builder {
+  background-color: #242430;
+  color:white;
+  font-family: $upfont;
+  font-weight: bold;
+
+  .goals-bg {
+    text-align: center;
+  }
+
+  h1 {
+    color: $uporange;
+    font-family: $upfont;
+    font-weight:bold;
+  }
+
+  #goal_name {
+    color: $upyellow;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #due_date {
+    font-size: 20px;
+  }
+
+  #goal_reason {
+    font-size: 20px;
+  }
+
+  #weekly-contribution {
+    font-size: 20px;
+  }
+
+  .wc {
+   font-size: 20px;
+   display: flex;
+  justify-content: center;
+  }
+
+  .purchase {
+    font-size: 20px;
+  }
+
+  .cost {
+    font-size: 20px;
+  }
+
+  .submit {
+    color: #385454;
+    background-color: $upyellow;
+    border-radius: 40px;
+    font-size: 18px;
+    padding:10px;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #385454;
+      color: $upyellow;
+      font-weight: bold;
+    }
+  }
+}
