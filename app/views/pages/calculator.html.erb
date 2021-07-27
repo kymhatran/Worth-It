@@ -9,21 +9,25 @@
         - Interpolate impact of goal timeline within reasons for saving
         - Represent the sum of WC - COP visually
         -->
-<div class="card mb-3 mx-auto col-md-4 py-3 shadow-sm rounded">
-  <div id="goal_name"><%= params[:param1] %></div>
-  <div id="due_date"><%= params[:param2] %></div>
-  <div id="goal_reason"><%= params[:param3] %></div>
-  <div class="d-flex">
-    <div> This is your weekly contribution: $</div>
-    <div id= "weekly-contribution"><%= params[:param4] %> </div>
-  </div>
+<div class="calc-builder card mb-3 mx-auto col-md-4 py-3 shadow-sm rounded p-3 mb-2">
+<div class="goals-bg">
+    <h1> Your Goal </h1>
+    <div  id="goal_name"><h2><%= params[:param1] %></h2></div>
+    <div class="mt-2 mb-2" id="goal_reason"> <%= params[:param3] %></div>
+    <div id="due_date"> Due-date:<em> <strong> <%= params[:param2] %></em></strong></div>
+    <div class="d-flex justify-content-center">
+      <div class="wc"> Weekly contribution: $</div>
+      <div id= "weekly-contribution"><%= params[:param4] %></div>
+    </div>
+</div>
+  <br>
 <form id="purchase_form">
-  <label for="purchase">What do you want to buy?</label><br>
+  <label class= "purchase" for="purchase">What do you want to buy?</label><br>
   <input type="text" class="purchase" name="purchase"><br>
-  <label for="cost">How much does it cost?</label><br>
+  <label class= "cost mt-2" for="cost">How much does it cost?</label><br>
   <input type="text" class="cost" name="cost">
-  <div>
-    <input type="submit" value="Submit">
+  <div class= "mt-3">
+    <input class= "submit" type="submit" value="SHOW ME THE DAMAGE!">
   </div>
 </form>
 <div>
