@@ -20,7 +20,7 @@ ul {
     font-weight:bold;
   }
 
-  #goal_name {
+ h2{
     color: $upyellow;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -31,7 +31,8 @@ ul {
   }
 
   #goal_reason {
-    font-size: 20px;
+    font-size: 18px;
+    font-style: italic;
   }
 
   #weekly-contribution {
@@ -58,12 +59,13 @@ ul {
     border-radius: 40px;
     font-size: 18px;
     padding:10px;
-    font-weight: bold;
+    font-family: $upfont;
 
     &:hover {
       background-color: #385454;
       color: $upyellow;
       font-weight: bold;
+      font-family: $upfont;
     }
   }
 }

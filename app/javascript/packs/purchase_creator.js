@@ -11,11 +11,11 @@ function calculator() {
         const days_reason = document.getElementById("days_reason")
         const visual = document.getElementById("visual")
         const goal_name = document.getElementById("goal_name").getAttribute("value")
-        const goal_reason = document.getElementById("goal_reason").getAttribute("value")
+        const goal_reason = document.getElementById("goal_reason").innerHTML
         const purchase = purchaseForm.querySelectorAll("input")[0].value
         const cost = purchaseForm.querySelectorAll("input")[1].value
 
-      const calculatedImpact = (parseInt(cost) / parseInt(weeklyContribution)) * 7
+      const calculatedImpact = (parseInt(cost) / parseInt(weeklyContribution)).toFixed() * 7
 
 // This is randomizing the objects, value and emojis
 
@@ -36,15 +36,15 @@ function calculator() {
       const emoji_name = randomObject[2]
 
 // randomise the heading
-      const quotes= ["Not so fast, Moneybags 💰 ", "Are you Jerry Maguire? Coz I'm going to need you to SHOW ME THE MONEY! 💵", "Look's like someone's got champagne 🥂 taste on a beer 🍺 budget"]
+      const quotes= ["Not so fast, Moneybags", "Are you Jerry Maguire? Coz I'm going to need you to SHOW ME THE MONEY!", "Look's like someone's got champagne taste on a beer budget"]
       const randomQuotes = quotes[Math.floor(Math.random() * quotes.length)];
 
 // the output to the calculator builder results
 
       heading.innerHTML = `${randomQuotes}`
       impact.innerHTML = `If you buy this (these) ${purchase} for $${cost}:`
-      setback.innerHTML = `⭐️ You'll need to wait another ${calculatedImpact} days to achieve your goal`
-      days_reason.innerHTML = `📆 That's ${calculatedImpact} days without your ${goal_reason}`
+      setback.innerHTML = `You'll need to wait another ${calculatedImpact} days to achieve your goal`
+      days_reason.innerHTML = `That's ${calculatedImpact} days longer, you're whinging "${goal_reason}"`
       context.innerHTML = `Plus, $${cost} is equivalent to ${items} ${emoji_name}`;
       visual.innerHTML = emoji.repeat(items);
     });

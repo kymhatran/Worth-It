@@ -12,18 +12,18 @@
 <div class="calc-builder card mb-3 mx-auto col-md-4 py-3 shadow-sm rounded p-3 mb-2">
 <div class="goals-bg">
     <h1> Your Goal </h1>
-    <div id="goal_name"><h3><%= params[:param1] %></h3></div>
+    <div  id="goal_name"><h2><%= params[:param1] %></h2></div>
+    <div class="mt-2 mb-2" id="goal_reason"> <%= params[:param3] %></div>
     <div id="due_date"> Due-date:<em> <strong> <%= params[:param2] %></em></strong></div>
-    <div id="goal_reason"> Reason: <em> <strong> <%= params[:param3] %> </em> </strong></div>
     <div class="d-flex justify-content-center">
       <div class="wc"> Weekly contribution: $</div>
-      <div id= "weekly-contribution"> <em> <strong><%= params[:param4] %> </em></strong></div>
+      <div id= "weekly-contribution"><%= params[:param4] %></div>
     </div>
 </div>
   <br>
 <form id="purchase_form">
   <label class= "purchase" for="purchase">What do you want to buy?</label><br>
-  <input type="text" class="purchase" name="purchase" maxlength= 2 width: 20px><br>
+  <input type="text" class="purchase" name="purchase"><br>
   <label class= "cost mt-2" for="cost">How much does it cost?</label><br>
   <input type="text" class="cost" name="cost">
   <div class= "mt-3">
