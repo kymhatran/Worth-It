@@ -1,8 +1,16 @@
 //Front end code for the calculator builder
+// #list {
+//   list-style: none; /* Remove default bullets */
+// }
 
-ul {
-  list-style: none;
-}
+// #list li::before {
+//   content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+//   color: $uporange; /* Change the color */
+//   font-weight: bold; /* If you want it to be bold */
+//   display: inline-block; /* Needed to add space between the bullet and the text */
+//   width: 1em; /* Also needed for space (tweak if needed) */
+//   margin-left: -1em; /* Also needed for space (tweak if needed) */
+// }
 
 .calc-builder {
   background-color: #242430;
@@ -56,10 +64,11 @@ ul {
   .submit {
     color: #385454;
     background-color: $upyellow;
-    border-radius: 40px;
-    font-size: 18px;
+    border-radius: 20px;
+    font-size: 17px;
     padding:10px;
     font-family: $upfont;
+    font-weight: bolder;
 
     &:hover {
       background-color: #385454;
@@ -69,3 +78,47 @@ ul {
     }
   }
 }
+
+.calc-results {
+  margin-top: 20px;
+  justify-content: center;
+  line-height: 1.6;
+}
+
+#heading {
+  color: $uporange;
+  font-weight: bold;
+}
+
+#impact {
+  font-size: 20px;
+}
+
+
+#list li{
+font-size: 20px;
+}
+
+#list .list-item{
+    list-style-image: none;
+    padding: 0px 0px 0px 2.2rem;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI3IiBjeT0iNyIgcj0iNyIgZmlsbD0iI0ZGRUY2QiIvPjwvc3ZnPgo=");
+    background-position: 0px 6px;
+    background-repeat: no-repeat;
+}
+
+#context{
+ font-size: 19px;
+ margin: 0;
+
+}
+
+#visual{
+  font-size: 50px;
+}
+
+.btn {
+  background-color: $uporange;
+  font-family: $upfont;
+}
+
