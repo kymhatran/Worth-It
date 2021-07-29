@@ -10,7 +10,6 @@ module ContributionHelper
     end
     value
   end
-
   def weekly_contributions(goal, user)
     value = account_balance(goal, user)
     date_today = Time.now.strftime("%d/%m/%Y")
@@ -18,6 +17,10 @@ module ContributionHelper
     if no_weeks < 1
       no_weeks = 1
     end
-    ((goal.amount - value.to_i) / no_weeks)
+    percentage = percentage_of_goal_amount(value, goal)
+    [((goal.amount - value.to_i) / no_weeks), percentage]
+  end
+  def percentage_of_goal_amount(value, goal)
+    ((value.to_f / goal.amount) * 100).round
   end
 end

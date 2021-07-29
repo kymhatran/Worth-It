@@ -1,22 +1,30 @@
 <% @goal_names = goal_names(@goals,current_user) %>
 
-<ul>
-    <% @goal_names.each do |goal|%>
-    <li id= "goal_name"> <%= goal.name %>,
-    <li id= "goal_reason"><%= goal.reason.description if goal.reason.present? %> </li>
-    <li id="due_date"> <%= goal.due_date %> </li>
-    <% weeklyContribution = weekly_contributions(goal, current_user.api_key) %>
-    <li>$<%= weeklyContribution %> </li>
-    <%= link_to "Is It Worth It?", calculator_path(:param1 => "#{goal.name}",
-        :param2 => "#{goal.due_date}",
-        :param3 => "#{goal.reason.description}",
-        :param4 => "#{weeklyContribution}"),
-        class: "btn btn-warning" %>
+<div class="d-flex flex-column mt-0 mb-0">
+  <% @goal_names.each do |goal|%>
+  <% weeklyContribution = weekly_contributions(goal, current_user.api_key) %>
+  <ul>
+    <div class="card bg-white shadow rounded mt-6 p-2">
+        <h4 id= "goal_name">  <%= goal.name %> </h4>
+        <li id= "goal_reason"><%= goal.reason.description if goal.reason.present? %> </li>
+        <li>$<%= weeklyContribution[0] %> </li>
+        <li id="amount"> <%= goal.amount %> </li>
+        <li id="due_date"> <%= goal.due_date %> </li>
+
+        <%= link_to "Is It Worth It?", calculator_path(:param1 => "#{goal.name}",
+            :param2 => "#{goal.due_date}",
+            :param3 => "#{goal.reason.description}",
+            :param4 => "#{weeklyContribution}"),
+            class: "btn btn-warning mb-2" %>
+        <div class="progress">
+          <div class="progress-bar bg-warning" role="progressbar"
+               style="width: <%= weeklyContribution[1] %>%;" aria-valuenow="<%= weeklyContribution[1] %>"
+               aria-valuemin="0" aria-valuemax="<%= goal.amount %>"></div>
+        </div>
+
+    </div>
+    </ul>
   <% end %>
-</ul>
 
-
-
-
-
+  </div>
 
