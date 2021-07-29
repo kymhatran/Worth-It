@@ -19,12 +19,16 @@
         <% end %>
       <% end %>
       </select>
-                         <!--   f.input :name, as: :select, collection: UpApi.goal_saver(current_user.api_key), prompt: 'Select Saver', label: "Please choose your UP Saver account!", :input_html => { id: "select" } -->
-      <p>Your Balance:</p>
-      <p id="result"></p>
+      <div class="row mx-auto">
+        <p>Your current balance: $</p>
+        <p id="result">0.00</p>
+      </div>
       <%= f.input :amount, label: "How much do you want to save?", :input_html => { id: "amount" } %>
       <%= f.input :due_date, id:'goal_due_date', as: :string,label: "When do you want to save it by?" %>
-      <p id="weeks"></p>
+      <div class="row mx-auto">
+        <p>Weekly contribution: $</p>
+        <p id="weeks">0.00</p>
+      </div>
       <%= f.simple_fields_for :reason, Reason.new do |p| %>
         <%= p.input :description, label: "Why are you saving for this goal?", placeholder: ["I need to avoid...a mid-life crisis", "I want to people to...be jealous of me", "I strive to be...financially secure"].sample%>
       <% end %>
