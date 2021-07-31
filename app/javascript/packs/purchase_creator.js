@@ -16,6 +16,7 @@ function calculator() {
         const purchase = purchaseForm.querySelectorAll("input")[0].value
         const cost = purchaseForm.querySelectorAll("input")[1].value
         const listChildren = document.querySelectorAll('#list>li')
+        const impactBtns = document.querySelector('.impact-btns')
 
         const calculatedImpact = (parseInt(cost) / parseInt(weeklyContribution)).toFixed() * 7
 
@@ -48,7 +49,18 @@ function calculator() {
           if (i < randomQuote.length) {
             document.getElementById("heading").innerHTML += randomQuote.charAt(i);
             i++;
+
+              if (i == randomQuote.length - 1){
+                impact.innerHTML = `If you buy this (these) ${purchase} for $${cost}:`
+                setback.innerHTML = `You'll need to wait another ${calculatedImpact} days to achieve your goal`
+                days_reason.innerHTML = `That's ${calculatedImpact} days longer, you're whinging about ${goal_reason}`
+                context.innerHTML = `Plus, $${cost} is equivalent to ${items} ${emoji_name}`;
+                visual.innerHTML = emoji.repeat(items);
+                impactBtns.style.display = "flex"
+                }
+
             setTimeout(typeWriter, speed);
+
           }
         }
 
@@ -57,15 +69,11 @@ function calculator() {
           listChild.classList.add("list-item")
         });
 
+
 // the output to the calculator builder results
 
       typeWriter()
       // list.style.listStyleType = "disc"
-      impact.innerHTML = `If you buy this (these) ${purchase} for $${cost}:`
-      setback.innerHTML = `You'll need to wait another ${calculatedImpact} days to achieve your goal`
-      days_reason.innerHTML = `That's ${calculatedImpact} days longer, you're whinging about ${goal_reason}`
-      context.innerHTML = `Plus, $${cost} is equivalent to ${items} ${emoji_name}`;
-      visual.innerHTML = emoji.repeat(items);
     });
   }
 }
