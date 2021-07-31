@@ -24,7 +24,7 @@
 
   h1 {
     color: $uporange;
-    font-family: $upfont;
+    font-family: $uporange;
     font-weight:bold;
   }
 
@@ -86,8 +86,19 @@
 }
 
 #heading {
-  color: $uporange;
+  color: $upyellow;
   font-weight: bold;
+}
+
+#heading {
+    // animation: 0.3s steps(3) 0.25s 1 normal forwards running gZwMMG;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDojRkY3QTY0O308L3N0eWxlPjwvZGVmcz48dGl0bGU+dGV4dCBoaWdobGlnaHQgYmFja2dyb3VuZCBvcmFuZ2U8L3RpdGxlPjxyZWN0IGNsYXNzPSJhIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIvPjwvc3ZnPgo=);
+    background-position: 0px 55px;
+    // background-repeat: repeat-x;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    will-change: background-position;
+    // -webkit-box-decoration-break: clone;
 }
 
 #impact {
@@ -118,7 +129,8 @@ font-size: 20px;
 }
 
 .btn {
-  background-color: $uporange;
+  background-color: #385454;
   font-family: $upfont;
+  font-weight: bold;
 }
 
