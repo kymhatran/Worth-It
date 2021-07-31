@@ -16,20 +16,15 @@
   font-family: Circular, Roboto, Helvetica, Arial, sans-serif;
 }
 
-
-// .navbar-lewagon {
-//   // font-family: Circular, Roboto, Helvetica, Arial, sans-serif;
-//   font-family: 'Caveat';
-//   font-style: normal;
-//   font-weight: bold;
-//   font-size: 64px;
-//   line-height: 64px;
-//   color: #FFEF6B;
-// }
-
-.navbar-lewagon .navbar-brand .logo {
+.navbar-lewagon .navbar-brand {
   object-fit: contain;
-  width: 40px;
-  height:40px;
+  width: 60px;
+  height: 60px;
   padding-left: 5px;
+}
+
+.logo {
+  width: 80px;
+  height: 60px;
+  padding-left: 0px;
 }
