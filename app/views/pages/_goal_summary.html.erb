@@ -1,30 +1,71 @@
 <% @goal_names = goal_names(@goals,current_user) %>
 
-<div class="d-flex flex-column mt-0 mb-0">
   <% @goal_names.each do |goal|%>
   <% weeklyContribution = weekly_contributions(goal, current_user.api_key) %>
-  <ul>
-    <div class="card bg-white shadow rounded mt-6 p-2">
-        <h4 id= "goal_name">  <%= goal.name %> </h4>
-        <li id= "goal_reason"><%= goal.reason.description if goal.reason.present? %> </li>
-        <li>$<%= weeklyContribution[0] %> </li>
-        <li id="amount"> <%= goal.amount %> </li>
-        <li id="due_date"> <%= goal.due_date %> </li>
 
-        <%= link_to "Is It Worth It?", calculator_path(:param1 => "#{goal.name}",
+    <div class="card_saver col-12">
+      <div class="card_header">
+        <div class="header_top">
+          <div class="card_name">
+            <h4 id= "goal_name">  <%= goal.name %> </h4>
+          </div>
+          <div class="card_numbers">
+            <div id="balance">
+             <h4> $47 </h4>
+            </div>
+            <div id="amount">
+             <p> of $<%= goal.amount %> </p>
+            </div>
+         </div>
+        </div>
+        <div class="card_progress">
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar"
+              style="width: <%= weeklyContribution[1] %>%;" aria-valuenow="<%= weeklyContribution[1] %>"
+              aria-valuemin="0" aria-valuemax="<%= goal.amount %>">
+             </div>
+          </div>
+        </div>
+        <div class="card_progress">
+          <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar"
+              style="width: <%= weeklyContribution[1] %>%;" aria-valuenow="<%= weeklyContribution[1] %>"
+              aria-valuemin="0" aria-valuemax="<%= goal.amount %>">
+             </div>
+          </div>
+        </div>
+      </div>
+        <div class="card_footer">
+          <div class="card_contributions">
+            <li>$<%= weeklyContribution[0] %> </li>
+          </div>
+          <div class="card_btn">
+        <%= link_to "Worth It?", calculator_path(:param1 => "#{goal.name}",
             :param2 => "#{goal.due_date}",
             :param3 => "#{goal.reason.description}",
-            :param4 => "#{weeklyContribution}"),
-            class: "btn btn-warning mb-2" %>
-        <div class="progress">
-          <div class="progress-bar bg-warning" role="progressbar"
-               style="width: <%= weeklyContribution[1] %>%;" aria-valuenow="<%= weeklyContribution[1] %>"
-               aria-valuemin="0" aria-valuemax="<%= goal.amount %>"></div>
+            :param4 => "#{weeklyContribution}") %>
+          </div>
         </div>
+      </div>
+      <% end %>
 
-    </div>
-    </ul>
-  <% end %>
 
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
