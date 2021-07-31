@@ -19,6 +19,7 @@
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :api_key,
+                input_html: { type: 'password'},
                 required: true %>
     <%= f.input :photo, as: :file %>
   </div>
