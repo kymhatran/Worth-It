@@ -1,1 +1,70 @@
 // Specific CSS for your home-page
+.homepage-logo {
+  font: Circular;
+  font-size: 62px;
+  font-style: italic;
+  font-weight: 900;
+  color: $upyellow;
+  padding-left: 9px;
+  padding-top: 20px;
+}
+
+.value-prop {
+  font: Circular;
+  font-size: 12px;
+  font-weight: 400;
+  color: $upnavy;
+  padding-left: 12px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(#FF7A64, #ff8bb5);
+}
+
+.be-proactive-title {
+  font: Circular;
+  font-size: 20px;
+  font-weight: 600;
+  color: $upnavy;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.be-proactive-body {
+  font: Circular;
+  font-size: 14px;
+  font-weight: 500;
+  color: $upnavy;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.delayed-gratification-title {
+  font: Circular;
+  font-size: 20px;
+  font-weight: 600;
+  color: $upnavy;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.delayed-gratification-body {
+  font: Circular;
+  font-size: 14px;
+  font-weight: 500;
+  color: $upnavy;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  text-align: center;
+}
