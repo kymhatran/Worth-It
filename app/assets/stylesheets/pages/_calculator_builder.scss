@@ -12,6 +12,7 @@
 //   margin-left: -1em; /* Also needed for space (tweak if needed) */
 // }
 
+
 .calc-builder {
   background-color: $upnavy;
   color:white;
@@ -101,27 +102,27 @@
   }
 }
 
-  .submit {
-    color: white;
-    background-color: $uporange;
-    border-radius: 4px;
-    border-style: solid;
-    border-color: $uporange;
-    font-size: 15px;
-    font-family: $upfont;
-    // font-weight: bolder;
-    height: 35px;
-    // left: 76px;
-    transition: 0.3s;
+.submit {
+  color: white;
+  background-color: $uporange;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: $uporange;
+  font-size: 15px;
+  font-family: $upfont;
+  // font-weight: bolder;
+  height: 35px;
+  // left: 76px;
+  transition: 0.3s;
 
-    &:hover {
-      background-color: #FFFFFF;
-      color: $uporange;
-      font-family: $upfont;
-      height: 35px;
-      opacity: 1
-    }
+  &:hover {
+    background-color: #FFFFFF;
+    color: $uporange;
+    font-family: $upfont;
+    height: 35px;
+    opacity: 1
   }
+}
 
 .calc-results {
   margin-top: 20px;
