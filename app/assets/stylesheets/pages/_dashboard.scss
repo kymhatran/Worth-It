@@ -1,12 +1,14 @@
 // Specific CSS for your dashboard
 
+
+// align-items center will make it stretch the width of whatever screen size.
 .goal_cards {
   display: flex;
   justify-content: center;
   margin-top: 50px;
   list-style: none;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
 }
 
 ul {

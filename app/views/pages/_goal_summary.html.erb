@@ -1,5 +1,6 @@
 <% @goal_names = goal_names(@goals,current_user) %>
 
+  <div>
   <% @goal_names.each do |goal|%>
   <% weeklyContribution = weekly_contributions(goal, current_user.api_key) %>
 
@@ -25,30 +26,26 @@
               aria-valuemin="0" aria-valuemax="<%= goal.amount %>">
              </div>
           </div>
-        </div>
         <div class="card_progress">
-          <div class="progress">
-            <div class="progress-bar bg-primary" role="progressbar"
-              style="width: <%= weeklyContribution[1] %>%;" aria-valuenow="<%= weeklyContribution[1] %>"
-              aria-valuemin="0" aria-valuemax="<%= goal.amount %>">
-             </div>
-          </div>
+          <%= render "due_date", due_date: goal.due_date, created: goal.created_at %>
         </div>
       </div>
-        <div class="card_footer">
-          <div class="card_contributions">
-            <li>$<%= weeklyContribution[0] %> </li>
-          </div>
-          <div class="card_btn">
-        <%= link_to "Worth It?", calculator_path(:param1 => "#{goal.name}",
-            :param2 => "#{goal.due_date}",
-            :param3 => "#{goal.reason.description}",
-            :param4 => "#{weeklyContribution}") %>
-          </div>
+      </div>
+      <div class="card_footer">
+        <div class="card_contributions">
+          <li>$<%= weeklyContribution[0] %> </li>
         </div>
+        <div class="card_btn">
+          <%= link_to "Worth It?", calculator_path(:param1 => "#{goal.name}",
+          :param2 => "#{goal.due_date}",
+          :param3 => "#{goal.reason.description}",
+          :param4 => weeklyContribution[0]),
+          class: "submit mb-2" %>
+        </div>
+      </div>
       </div>
       <% end %>
-
+</div>
 
 
 

@@ -1,0 +1,12 @@
+<% no_weeks = num_weeks(due_date) %>
+
+<% goal_end = created_to_end_date(created, due_date) %>
+
+<% percentage = percentage_of_goal_amount(no_weeks, goal_end) %>
+
+
+<div class="progress mt-2">
+  <div class="progress-bar bg-dark" role="progressbar"
+       style="width: <%= percentage %>%;" aria-valuenow="<%= percentage %>"
+       aria-valuemin="0" aria-valuemax="<%= goal_end%>"></div>
+</div>
