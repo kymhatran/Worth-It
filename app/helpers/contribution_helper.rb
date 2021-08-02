@@ -33,6 +33,13 @@ module ContributionHelper
 
   def created_to_end_date(created, end_date)
     created_date = created.in_time_zone("Australia/Melbourne").strftime("%d/%m/%Y")
-    (((Date.parse(end_date)-Date.parse(created_date)).to_i) / 7).floor
+    # (((Date.parse(end_date)-Date.parse(created_date)).to_i) / 7).floor
+    ((Date.parse(end_date)-Date.parse(created_date)).to_i)
+  end
+
+  def num_days(goal)
+    date_today = Time.now.strftime("%d/%m/%Y")
+    no_weeks = ((Date.parse(goal)-Date.parse(date_today)).to_i)
   end
 end
+
