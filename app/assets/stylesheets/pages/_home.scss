@@ -68,3 +68,19 @@
   padding-top: 10px;
   text-align: center;
 }
+.nav-item {
+  font-family: $upfont;
+  font-size: 18px;
+}
+
+.navbar {
+  height: 50px;
+}
+
+.navbar-jay {
+  height: 10px !important;
+  padding-bottom: 5px;
+  @media (min-width:320px) {
+    height: 35px !important;
+  }
+}
