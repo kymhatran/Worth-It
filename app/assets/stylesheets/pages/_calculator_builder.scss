@@ -16,15 +16,16 @@
   background-color: $upnavy;
   color:white;
   font-family: $upfont;
-  font-weight: bold;
+  font-size: 18px;
 
   .goals-bg {
     text-align: center;
     background-color: #FFFFFF;
     color: $upnavy;
-    border-radius: 6px;
+    border-radius: 15px;
     padding: 10px;
     margin-top: 10px;
+    font-size: 18px;
   }
 
   h1 {
@@ -44,7 +45,7 @@
 
   #due_date {
     font-size: 18px;
-    border-radius: 6px;
+    border-radius: 15px;
     background-color: $upnavy;
     color: white;
     margin-bottom: 10px;

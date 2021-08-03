@@ -11,15 +11,21 @@
     justify-content: flex-start;
     flex-direction: row;
     height: 35px;
-    border-radius: 6px;
-    background: linear-gradient(to right,$uporange, $uppink);
+    border-radius: 15px;
+    background: $uporange;
     margin-bottom: 10px;
-    padding: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
     font-family: $upfont;
+    padding-right: 5px;
 }
 .dollar {
     font-size: 18px;
     display: flex;
     margin-left: auto;
     font-family: $upfont;
+}
+
+.card {
+    border-radius: 15px !important;
 }
