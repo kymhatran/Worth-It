@@ -12,6 +12,7 @@
 //   margin-left: -1em; /* Also needed for space (tweak if needed) */
 // }
 
+
 .calc-builder {
   background-color: $upnavy;
   color:white;
@@ -35,6 +36,7 @@
     font-weight: 300;
     font-size: 32px;
     line-height: 37px;
+    text-align: center;
   }
 
  // h2{
@@ -52,10 +54,11 @@
     padding: 5px;
   }
 
-  // #goal_reason {
-  //   font-size: 18px;
-  //   font-style: italic;
-  // }
+  #goal_reason {
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+  }
 
   #weekly-contribution {
     font-size: 18px;
@@ -68,7 +71,7 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    border-radius: 6px;
+    border-radius: 15px;
     background-color: $upyellow;
     color: $upnavy;
     margin-bottom: 10px;
@@ -86,43 +89,32 @@
    text-align:left;
 
     input[type=text] {
-      border: 1px solid $uporange;
-      border-radius: 4px;
-      padding: 5px;
+      border: 3px solid $uporange;
+      border-radius: 15px;
+      padding-left: 10px;
+      font-size: 18px;
       width: 100%;
     }
   }
 
-  .purchase {
-    font-size: 18px;
-  }
-
-  .cost {
+  .purchase, .cost {
     font-size: 18px;
   }
 }
 
-  // .submit {
-  //   color: white;
-  //   background-color: $uporange;
-  //   border-radius: 4px;
-  //   border-style: solid;
-  //   border-color: $uporange;
-  //   font-size: 15px;
-  //   font-family: $upfont;
-  //   // font-weight: bolder;
-  //   height: 35px;
-  //   // left: 76px;
-  //   transition: 0.3s;
-
-  //   &:hover {
-  //     background-color: #FFFFFF;
-  //     color: $uporange;
-  //     font-family: $upfont;
-  //     height: 35px;
-  //     opacity: 1
-  //   }
-  // }
+.submit {
+  text-decoration: none;
+  background-color: #FF7A64;
+  color: $upnavy;
+  padding: 8px;
+  border-radius: 4px;
+  transition: 0.3s;
+  border:none;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
 
 .calc-results {
   margin-top: 20px;
@@ -182,7 +174,8 @@ font-size: 20px;
   font-family: $upfont;
   border-style: solid;
   border-color: $uporange;
-  height: 35px;
+  height: 40px;
+  weight: 65px;
   margin-right: 10px;
   // left: 76px;
   transition: 0.1s;
@@ -190,9 +183,11 @@ font-size: 20px;
 
   &:hover {
     font-weight: 900;
-    color: $uporange;
-    border-width: 2px;
-    height: 35px;
+    background-color: $uporange;
+    color: white;
+    border-width: 1px;
+    // height: 40px;
+    // width: 65px;
   }
 }
 

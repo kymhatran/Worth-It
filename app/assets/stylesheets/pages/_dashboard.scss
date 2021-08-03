@@ -1,5 +1,7 @@
 // Specific CSS for your dashboard
-
+html, body {
+  background-color: $upnavy;
+}
 
 // align-items center will make it stretch the width of whatever screen size.
 .goal_cards {
