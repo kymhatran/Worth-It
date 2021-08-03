@@ -9,7 +9,7 @@
         - Interpolate impact of goal timeline within reasons for saving
         - Represent the sum of WC - COP visually
         -->
-<div class="calc-builder mx-auto card col-md-4 py-3 shadow-sm rounded p-3">
+<div class="calc-builder mx-auto bg-primary col-md-4 py-3 shadow-sm rounded p-3">
       <!-- <h1> Your Goal </h1> -->
       <div class= "mx-auto" id="goal_name"><h1><%= params[:param1] %></h1></div>
       <div class="mb-2 mx-auto" id="goal_reason"> "<%= params[:param3] %>"</div>
@@ -48,7 +48,7 @@
           <p id= "context"></p>
           <p id="visual"><p>
         <div class="impact-btns">
-          <%= link_to "Ask me again", calculator_path, class: "submit" %>
+          <%= link_to "Ask me again", calculator_path, class: "card_btn" %>
         </div>
     </div>
 

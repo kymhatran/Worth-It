@@ -1,10 +1,18 @@
 <div class="p-3 mb-2 bg-primary">
-  <h1>Dashboard</h1>
-
-  <div class="card mb-3 mx-auto col-md-4 py-3 shadow-sm rounded">
-    <h2><%= link_to "Build A Goal", goal_builder_path, class: "btn btn-warning" %></h2>
+  <div class="home_title">
+    <h1>Worth It?</h1>
   </div>
+  <div class="home_subheading">
+    <p> Powered by UP Bank but in no way affiliated with them</p>
+  </div>
+
   <div class="goal_cards">
     <%= render "goal_summary" %>
   </div>
+
+  <div class="card mb-3 mx-auto col-md-4 py-3 shadow-sm rounded">
+    <p>Yo, attach your saver account Worth It!</p>
+    <h2><%= link_to "Build A Goal", goal_builder_path, class: "btn btn-warning" %></h2>
+  </div>
+
 </div>
