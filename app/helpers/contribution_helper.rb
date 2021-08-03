@@ -20,7 +20,7 @@ module ContributionHelper
     date_today = Time.now.strftime("%d/%m/%Y")
     no_weeks = num_weeks(goal.due_date)
     percentage = percentage_of_goal_amount(value, goal.amount)
-    [((goal.amount - value.to_i) / no_weeks), percentage]
+    [((goal.amount - value.to_i) / no_weeks), percentage, value]
   end
 
   # Find what percentage of the goal you've saved
