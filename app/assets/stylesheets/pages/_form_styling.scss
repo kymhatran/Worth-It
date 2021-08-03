@@ -3,7 +3,8 @@
   border-color: $uporange;
   border-width: 3px;
   // background-image: -moz-linear-gradient(center bottom, $uporange 33%, $uppink 67% );
-  padding: 2px;
+  padding-left: 10px;
+  padding-top: 5px;
   // border-image: linear-gradient(to left, #00C853, #B2FF59);
   // border-image: -webkit-linear-gradient(left bottom, right top,$uporange, $uppink) !important;
     // padding-left: 20px;
@@ -17,4 +18,10 @@
     // margin-right: auto;
     border-radius: 15px;
     font-family: $upfont;
+    font-size: 18px;
+}
+
+.new_goal {
+  font-family: $upfont;
+  font-size: 18px;
 }
