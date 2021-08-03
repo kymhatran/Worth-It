@@ -23,6 +23,10 @@ class GoalsController < ApplicationController
     redirect_to dashboard_path(current_user)
   end
 
+  def edit
+    @goal = Goal.find(params[:id])
+  end
+
   private
 
   def goal_params
