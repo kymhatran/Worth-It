@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'pages#dashboard'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :goals, only: [:create, :destroy, :update]
+  resources :goals, only: [:create, :destroy, :update, :edit]
 end

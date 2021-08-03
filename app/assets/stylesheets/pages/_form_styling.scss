@@ -1,0 +1,20 @@
+.form-style {
+  // border-style: solid;
+  border-color: $uporange;
+  border-width: 3px;
+  // background-image: -moz-linear-gradient(center bottom, $uporange 33%, $uppink 67% );
+  padding: 2px;
+  // border-image: linear-gradient(to left, #00C853, #B2FF59);
+  // border-image: -webkit-linear-gradient(left bottom, right top,$uporange, $uppink) !important;
+    // padding-left: 20px;
+    // padding-right: 20px;
+    // font-family: Bookman, URW;
+    // color: black;;
+    // background-color: -webkit-linear-gradient(left bottom, right top,$uporange, $uppink) !important;
+    // width: 50%;
+    // display: block;
+    // margin-left: auto;
+    // margin-right: auto;
+    border-radius: 15px;
+    font-family: $upfont;
+}
