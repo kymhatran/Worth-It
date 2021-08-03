@@ -106,7 +106,7 @@
   color: $upnavy;
   padding: 8px;
   border-radius: 4px;
-  transition: 0.3s;
+  // transition: 0.1s;
   border:none;
   &:hover {
     color: white;
@@ -166,22 +166,22 @@ font-size: 20px;
 
 .btn {
   // position: absolute;
-  color: $uporange;
-  background-color: white;
+  color: $upnavy;
+  background-color: $upyellow;
   border-radius: 4px;
   font-family: $upfont;
   border-style: solid;
-  border-color: $uporange;
+  border-color: $upyellow;
   height: 40px;
   weight: 65px;
   margin-right: 10px;
   // left: 76px;
-  transition: 0.1s;
+  // transition: 0.1s;
   // font-weight: bold;
 
   &:hover {
     font-weight: 900;
-    background-color: $uporange;
+    background-color: rgb(247, 231, 111);
     color: white;
     border-width: 1px;
     // height: 40px;
@@ -192,5 +192,9 @@ font-size: 20px;
 .impact-btns {
   display: none;
   justify-content: flex-end;
+}
+
+@media screen {
+  max-width:320px;
 }
 
