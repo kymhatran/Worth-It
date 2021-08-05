@@ -1,3 +1,4 @@
+
 function progressBar() {
   const elem = document.querySelectorAll(".value-bar");
   elem.forEach(ele => {

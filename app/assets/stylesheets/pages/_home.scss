@@ -1,20 +1,20 @@
 // Specific CSS for your home-page
 .homepage-logo {
-  font: Circular;
-  font-size: 62px;
-  font-style: italic;
+  font-size: 80px;
+  font-family: 'Shadows Into Light', cursive;
   font-weight: 900;
   color: $upyellow;
-  padding-left: 5px;
-  padding-top: 20px;
+  padding-left: 12px;
+  padding-top: 5px;
 }
 
 .value-prop {
   font: Circular;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   color: $upnavy;
-  padding-left: 12px;
+  padding-left: 13px;
+  padding-top: 5px;
 }
 
 .homepage{
@@ -25,48 +25,54 @@
   background: linear-gradient(#FF7A64, #ff8bb5);
 }
 
-.be-proactive-title {
-  font: Circular;
-  font-size: 20px;
-  font-weight: 600;
-  color: $upnavy;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 40px;
-  text-align: center;
+.highlight {
+  background-color: $upyellow;
+  border-radius: 5px;
+  padding: 5px;
 }
 
-.be-proactive-body {
-  font: Circular;
-  font-size: 14px;
-  font-weight: 500;
-  color: $upnavy;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  text-align: center;
+.speech-bubble rounded {
+  height: 100vh;
+  width: 100vw;
+  padding-bottom: 50px;
+  padding-right: 80px;
+  text-align: right;
 }
 
-.delayed-gratification-title {
-  font: Circular;
-  font-size: 20px;
-  font-weight: 600;
-  color: $upnavy;
-  padding-left: 20px;
+.Pig {
+  height: 120vh;
+  width: 100vw;
+  position: relative;
+  text-align: right;
+  padding-top: 70px;
   padding-right: 20px;
-  padding-top: 40px;
-  text-align: center;
 }
 
-.delayed-gratification-body {
-  font: Circular;
-  font-size: 14px;
-  font-weight: 500;
-  color: $upnavy;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 10px;
-  text-align: center;
+.speech-bubble {
+   background: #cc39d8;
+   color: #fff;
+   display: inline-block;
+   font-size: 14px;
+   line-height: 4em;
+   margin-bottom: 1em;
+   padding: 0 1em;
+   position: relative;
+   text-align: center;
+   vertical-align: top;
+   min-width: 7em;
+   margin: 30px 10px;
+}
+
+.speech-bubble:after {
+  border: 1em solid transparent;
+  border-top-color: #cc39d8;
+  content: '';
+  margin-left: -1em;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
 }
 .nav-item {
   font-family: $upfont;
@@ -74,13 +80,20 @@
 }
 
 .navbar {
-  height: 50px;
+  height: 62px;
+  background-color: $uporange;
 }
 
 .navbar-jay {
-  height: 10px !important;
+  padding-top: 2px;
+  // height: 10px !important;
   padding-bottom: 5px;
   @media (min-width:320px) {
-    height: 35px !important;
+    height: 30px !important;
   }
+}
+
+.logo {
+  position: absolute;
+  top: -5px;
 }
