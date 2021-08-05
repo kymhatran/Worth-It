@@ -5,6 +5,10 @@
 import {initflatpickr} from "./init_flatpickr.js"
 import {calculator} from "./purchase_creator.js"
 import {goalSaver} from "./goal_saver.js"
+import {animateValue} from "./dashboard.js"
+import {progressBar} from "./progress_bar.js"
+
+
 
 require("@rails/ujs").start()
 require("turbolinks").start()
@@ -36,4 +40,13 @@ document.addEventListener('turbolinks:load', () => {
   initflatpickr();
   calculator();
   goalSaver();
+  setTimeout(() => {
+    progressBar();
+  }, 2000)
+
+  setTimeout(() => {
+    animateValue();
+  }, 2000)
+
+
 });
