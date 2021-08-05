@@ -12,19 +12,21 @@
 //   margin-left: -1em; /* Also needed for space (tweak if needed) */
 // }
 
+
 .calc-builder {
   background-color: $upnavy;
   color:white;
   font-family: $upfont;
-  font-weight: bold;
+  font-size: 18px;
 
   .goals-bg {
     text-align: center;
     background-color: #FFFFFF;
     color: $upnavy;
-    border-radius: 6px;
+    border-radius: 15px;
     padding: 10px;
     margin-top: 10px;
+    font-size: 18px;
   }
 
   h1 {
@@ -34,6 +36,7 @@
     font-weight: 300;
     font-size: 32px;
     line-height: 37px;
+    text-align: center;
   }
 
  // h2{
@@ -44,17 +47,18 @@
 
   #due_date {
     font-size: 18px;
-    border-radius: 6px;
+    border-radius: 15px;
     background-color: $upnavy;
     color: white;
     margin-bottom: 10px;
     padding: 5px;
   }
 
-  // #goal_reason {
-  //   font-size: 18px;
-  //   font-style: italic;
-  // }
+  #goal_reason {
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+  }
 
   #weekly-contribution {
     font-size: 18px;
@@ -67,7 +71,7 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    border-radius: 6px;
+    border-radius: 15px;
     background-color: $upyellow;
     color: $upnavy;
     margin-bottom: 10px;
@@ -85,43 +89,32 @@
    text-align:left;
 
     input[type=text] {
-      border: 1px solid $uporange;
-      border-radius: 4px;
-      padding: 5px;
+      border: 3px solid $uporange;
+      border-radius: 15px;
+      padding-left: 10px;
+      font-size: 18px;
       width: 100%;
     }
   }
 
-  .purchase {
-    font-size: 18px;
-  }
-
-  .cost {
+  .purchase, .cost {
     font-size: 18px;
   }
 }
 
-  // .submit {
-  //   color: white;
-  //   background-color: $uporange;
-  //   border-radius: 4px;
-  //   border-style: solid;
-  //   border-color: $uporange;
-  //   font-size: 15px;
-  //   font-family: $upfont;
-  //   // font-weight: bolder;
-  //   height: 35px;
-  //   // left: 76px;
-  //   transition: 0.3s;
-
-  //   &:hover {
-  //     background-color: #FFFFFF;
-  //     color: $uporange;
-  //     font-family: $upfont;
-  //     height: 35px;
-  //     opacity: 1
-  //   }
-  // }
+.submit {
+  text-decoration: none;
+  background-color: #FF7A64;
+  color: $upnavy;
+  padding: 8px;
+  border-radius: 4px;
+  // transition: 0.1s;
+  border:none;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
 
 .calc-results {
   margin-top: 20px;
@@ -175,28 +168,35 @@ font-size: 20px;
 
 .btn {
   // position: absolute;
-  color: $uporange;
-  background-color: white;
+  color: $upnavy;
+  background-color: $upyellow;
   border-radius: 4px;
   font-family: $upfont;
   border-style: solid;
-  border-color: $uporange;
-  height: 35px;
+  border-color: $upyellow;
+  height: 40px;
+  weight: 65px;
   margin-right: 10px;
   // left: 76px;
-  transition: 0.1s;
+  // transition: 0.1s;
   // font-weight: bold;
 
   &:hover {
     font-weight: 900;
-    color: $uporange;
-    border-width: 2px;
-    height: 35px;
+    background-color: rgb(247, 231, 111);
+    color: white;
+    border-width: 1px;
+    // height: 40px;
+    // width: 65px;
   }
 }
 
 .impact-btns {
   display: none;
   justify-content: flex-end;
+}
+
+@media screen {
+  max-width:320px;
 }
 

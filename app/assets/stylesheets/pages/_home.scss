@@ -17,7 +17,7 @@
   padding-top: 5px;
 }
 
-html, body {
+.homepage{
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -73,4 +73,20 @@ html, body {
   left: 50%;
   width: 0;
   height: 0;
+}
+.nav-item {
+  font-family: $upfont;
+  font-size: 18px;
+}
+
+.navbar {
+  height: 50px;
+}
+
+.navbar-jay {
+  height: 10px !important;
+  padding-bottom: 5px;
+  @media (min-width:320px) {
+    height: 35px !important;
+  }
 }

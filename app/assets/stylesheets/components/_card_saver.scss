@@ -58,7 +58,31 @@
   margin-bottom: 8px;
 }
 
+.progress {
 
+}
+
+.dollar-icon {
+  position: absolute;
+  top: 83px;
+  right: 15px;
+  width: 22px;
+  height: auto
+}
+
+.time-icon {
+  position: absolute;
+  top: 113px;
+  right: 25px;
+  width: 22px;
+  height: auto;
+}
+
+.dollar-bill {
+  position: absolute;
+  left: 10px;
+  top: 160px;
+}
 
 
 .card_footer {
@@ -71,7 +95,11 @@
 }
 
 .card_contributions {
-color: #404040;
+  color: #404040;
+  padding-bottom: 20px;
+  padding-left: 22px;
+  right: 18px;
+  z-index: 10;
 }
 
 .card_btn {
