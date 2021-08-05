@@ -75,12 +75,18 @@
 
 .navbar {
   height: 50px;
+  background-color: $uporange;
 }
 
 .navbar-jay {
+  padding-top: 20px;
   height: 10px !important;
   padding-bottom: 5px;
   @media (min-width:320px) {
     height: 35px !important;
   }
+}
+
+.logo {
+  padding-bottom: 5px;
 }
