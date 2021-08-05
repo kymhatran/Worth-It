@@ -80,19 +80,20 @@
 }
 
 .navbar {
-  height: 50px;
+  height: 62px;
   background-color: $uporange;
 }
 
 .navbar-jay {
-  padding-top: 20px;
-  height: 10px !important;
+  padding-top: 2px;
+  // height: 10px !important;
   padding-bottom: 5px;
   @media (min-width:320px) {
-    height: 35px !important;
+    height: 30px !important;
   }
 }
 
 .logo {
-  padding-bottom: 5px;
+  position: absolute;
+  top: -5px;
 }
