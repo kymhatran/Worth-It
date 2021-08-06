@@ -22,12 +22,17 @@ function calculator() {
       const calculatedImpact = (parseInt(cost) / parseInt(weeklyContribution)).toFixed() * 7
       // This is randomizing the objects, value and emojis
       const object= [
-      [`☕️`, 5, "cups of coffee"],
-      [`🍹`, 10, "Aperol Spritzes"],
-      [`🍕`, 5, "slices of Pizza"],
-      [`🥖`, 7, "loaves of artisanal bread"],
-      [`🥑`, 10, "servings of smashed avo"],
-      [`🍔`, 4, "Maccas cheeseburgers"]
+      [`☕️`, 5, "coffees served by a bearded Fitzroy hipster"],
+      [`🍹`, 10, "Aperol Spritzes."],
+      [`🍕`, 25, "one large pizza from Crust."],
+      [`🥃`, 10, "shots of patron."],
+      [`🥖`, 7, "loaves of Baker's Delight bread."],
+      [`🥑`, 10, "servings of smashed avo."],
+      [`🍔`, 4, "Maccas cheeseburgers."],
+      [`🍆`, 30, "months worth of a subscription to Tinder Gold."],
+      [`💪`, 40, "weeks worth of a membership to F45."],
+      [`💻`, 11, "months worth of a Netflix subscription."],
+      [`⛽️`, 60, "tanks of petrol."],
       ]
 
       const randomObject = object[Math.floor(Math.random() * object.length)];
@@ -38,28 +43,28 @@ function calculator() {
       const emoji_name = randomObject[2]
 
       // randomise the heading
-      const quotes= ["Not so fast, Moneybags", "Are you Jerry Maguire? Coz I'm going to need you to SHOW ME THE MONEY!", "Look's like someone's got champagne taste on a beer budget"]
+      const quotes= ["Not so fast, Moneybags.", "Are you Jerry Maguire? Coz I'm going to need you to SHOW ME THE MONEY!", "Look's like someone's got champagne taste on a beer budget.", "Seems like you've got 99 problems and money would solve 98 of them.", "Someone's gonna have to live off Mi Goreng until payday.", "Money can't buy happiness - every rich person ever.", "Carpe Diem. You don't need to eat.", "If a was a rich girl, na na na na.", "You can't buy your bills with a hug."]
       const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
       let i = 0;
-      const speed = 100; /* The speed/duration of the effect in milliseconds */
+      const speed = 50; /* The speed/duration of the effect in milliseconds */
 
       function typeWriter() {
         if (i < randomQuote.length) {
-          document.getElementById("heading").innerHTML += randomQuote.charAt(i);
-          i++;
-
-          if (isSingular(purchase)) {
-            impact.innerHTML =  `If you buy this ${purchase} for $${cost}:`
-          } else {
-           impact.innerHTML = `If you buy these ${purchase} for $${cost}:`
+            document.getElementById("heading").innerHTML += randomQuote.charAt(i);
+            i++;
+            if (i == randomQuote.length - 1) {
+            if (isSingular(purchase)) {
+              impact.innerHTML =  `If you buy this ${purchase} for $${cost}:`
+            } else {
+             impact.innerHTML = `If you buy these ${purchase} for $${cost}:`
+           }
+           setback.innerHTML = `You'll need to wait another ${calculatedImpact} days to achieve your goal`
+           days_reason.innerHTML = `That's ${calculatedImpact} days longer, you're whinging about ${goal_reason}`
+           context.innerHTML = `Plus, $${cost} is equivalent to ${items} ${emoji_name}`;
+           visual.innerHTML = emoji.repeat(items);
+           impactBtns.style.display = "flex"
          }
-
-         setback.innerHTML = `You'll need to wait another ${calculatedImpact} days to achieve your goal`
-         days_reason.innerHTML = `That's ${calculatedImpact} days longer, you're whinging about ${goal_reason}`
-         context.innerHTML = `Plus, $${cost} is equivalent to ${items} ${emoji_name}`;
-         visual.innerHTML = emoji.repeat(items);
-         impactBtns.style.display = "flex"
        }
 
        setTimeout(typeWriter, speed);
