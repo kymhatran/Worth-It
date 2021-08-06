@@ -47,7 +47,7 @@
 
   #due_date {
     font-size: 18px;
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: $upnavy;
     color: white;
     margin-bottom: 10px;
@@ -71,7 +71,7 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: $upyellow;
     color: $upnavy;
     margin-bottom: 10px;
@@ -90,7 +90,7 @@
 
     input[type=text] {
       border: 3px solid $uporange;
-      border-radius: 15px;
+      border-radius: 5px;
       padding-left: 10px;
       font-size: 18px;
       width: 100%;
