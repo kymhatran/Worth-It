@@ -1,3 +1,5 @@
+const isSingular = require('is-singular')
+
 function calculator() {
   const purchaseForm = document.getElementById("purchase_form");
   if (purchaseForm) {
@@ -17,9 +19,12 @@ function calculator() {
       const cost = purchaseForm.querySelectorAll("input")[1].value
       const listChildren = document.querySelectorAll('#list>li')
       const impactBtns = document.querySelector('.impact-btns')
-      const isSingular = require('is-singular')
+      const again = document.getElementById("again")
+
+
 
       const calculatedImpact = (parseInt(cost) / parseInt(weeklyContribution)).toFixed() * 7
+
       // This is randomizing the objects, value and emojis
       const object= [
       [`☕️`, 5, "coffees served by a bearded Fitzroy hipster"],
@@ -64,6 +69,7 @@ function calculator() {
            context.innerHTML = `Plus, $${cost} is equivalent to ${items} ${emoji_name}`;
            visual.innerHTML = emoji.repeat(items);
            impactBtns.style.display = "flex"
+           again.classList.remove("d-none")
          }
        }
 

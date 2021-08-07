@@ -7,6 +7,8 @@ import {calculator} from "./purchase_creator.js"
 import {goalSaver} from "./goal_saver.js"
 import {animateValue} from "./dashboard.js"
 import {progressBar} from "./progress_bar.js"
+import {askAgainButton} from "./ask_again_button.js"
+
 
 
 
@@ -48,5 +50,6 @@ document.addEventListener('turbolinks:load', () => {
     animateValue();
   }, 2000)
 
+  askAgainButton();
 
 });
