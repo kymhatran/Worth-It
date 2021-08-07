@@ -1,9 +1,9 @@
-<h2>Sign up</h2>
+<h2 class='form-colour'>Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-inputs form-colour">
      <%= f.input :first_name,
                 required: true,
                 autofocus: true %>
@@ -23,7 +23,7 @@
                 required: true %>
   </div>
 
-  <div class="form-actions">
+  <div class="form-actions nav-item">
     <%= f.button :submit, "Sign up" %>
   </div>
 <% end %>
