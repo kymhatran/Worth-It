@@ -43,29 +43,43 @@ function calculator() {
       const randomObject = object[Math.floor(Math.random() * object.length)];
       console.log(randomObject);
 
-      const items= (parseInt(cost) / randomObject[1]).toFixed()
-      const emoji = randomObject[0]
-      const emoji_name = randomObject[2]
+      const items= (parseInt(cost) / randomObject[1]).toFixed();
+      const emoji = randomObject[0];
+      const emoji_name = randomObject[2];
+      // let randomQuote = "";
+      // let positiveQuote = "";
 
-      // randomise the heading
-      const quotes= ["Not so fast, Moneybags.", "Are you Jerry Maguire? Coz I'm going to need you to SHOW ME THE MONEY!", "Look's like someone's got champagne taste on a beer budget.", "Seems like you've got 99 problems and money would solve 98 of them.", "Someone's gonna have to live off Mi Goreng until payday.", "Money can't buy happiness - every rich person ever.", "Carpe Diem. You don't need to eat.", "If a was a rich girl, na na na na.", "You can't buy your bills with a hug."]
-      const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+      const quotes= ["Not so fast, Moneybags.", "Are you Jerry Maguire? Coz I'm going to need you to SHOW ME THE MONEY!", "Look's like someone's got champagne taste on a beer budget.", "Seems like you've got 99 problems and money would solve 98 of them.", "Someone's gonna have to live off Mi Goreng until payday.", "Money can't buy happiness - every rich person ever.", "If a was a rich girl, na na na na.", "You can't pay your bills with a hug."]
+      let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+      const positiveQuote = "Treat yourself, you deserve it!"
 
+      let finalQuote = (calculatedImpact > 7 ? randomQuote : positiveQuote);
+      console.log(finalQuote);
       let i = 0;
       const speed = 50; /* The speed/duration of the effect in milliseconds */
 
       function typeWriter() {
-        if (i < randomQuote.length) {
-            document.getElementById("heading").innerHTML += randomQuote.charAt(i);
+        if (i < finalQuote.length) {
+            document.getElementById("heading").innerHTML += finalQuote.charAt(i);
+            // document.getElementById("heading").innerHTML += positiveQuote.charAt(i);
             i++;
-            if (i == randomQuote.length - 1) {
+            if (i == finalQuote.length - 1) {
             if (isSingular(purchase)) {
               impact.innerHTML =  `If you buy this ${purchase} for $${cost}:`
             } else {
              impact.innerHTML = `If you buy these ${purchase} for $${cost}:`
-           }
-           setback.innerHTML = `You'll need to wait another ${calculatedImpact} days to achieve your goal`
-           days_reason.innerHTML = `That's ${calculatedImpact} days longer, you're whinging about ${goal_reason}`
+            }
+
+            if (calculatedImpact > 7) {
+              setback.innerHTML = `You'll need to wait another ${calculatedImpact} days to achieve your goal`
+              days_reason.innerHTML = `That's ${calculatedImpact} days longer you're whinging ${goal_reason}`
+            } else {
+              setback.innerHTML = `You'll only need to wait another ${calculatedImpact} days to achieve your goal`
+              days_reason.innerHTML = `That's only ${calculatedImpact} days longer you're whinging ${goal_reason}`
+            }
+
+
+
            context.innerHTML = `Plus, $${cost} is equivalent to ${items} ${emoji_name}`;
            visual.innerHTML = emoji.repeat(items);
            impactBtns.style.display = "flex"
