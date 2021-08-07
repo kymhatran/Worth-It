@@ -168,31 +168,31 @@ font-size: 20px;
   font-size: 50px;
 }
 
-.btn {
-  // position: absolute;
-  color: $upnavy;
-  background-color: $upyellow;
-  border-radius: 4px;
-  font-family: $upfont;
-  font-size: 18px;
-  border-style: solid;
-  border-color: $upyellow;
-  // height: 40px;
-  // weight: 65px;
-  margin-right: 10px;
-  // left: 76px;
-  // transition: 0.1s;
-  // font-weight: bold;
+// .btn {
+//   // position: absolute;
+//   color: $upnavy;
+//   background-color: $upyellow;
+//   border-radius: 4px;
+//   font-family: $upfont;
+//   font-size: 18px;
+//   border-style: solid;
+//   border-color: $upyellow;
+//   // height: 40px;
+//   // weight: 65px;
+//   margin-right: 10px;
+//   // left: 76px;
+//   // transition: 0.1s;
+//   // font-weight: bold;
 
-  &:hover {
-    font-weight: 900;
-    background-color: rgb(247, 231, 111);
-    color: white;
-    border-width: 1px;
-    // height: 40px;
-    // width: 65px;
-  }
-}
+//   &:hover {
+//     font-weight: 900;
+//     background-color: rgb(247, 231, 111);
+//     color: white;
+//     border-width: 1px;
+//     // height: 40px;
+//     // width: 65px;
+//   }
+// }
 
 .impact-btns {
   display: none;

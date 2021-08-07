@@ -1,56 +1,51 @@
 <% @goal_names = goal_names(@goals,current_user) %>
 
-  <div>
+<div>
   <% @goal_names.each do |goal|%>
   <% weeklyContribution = weekly_contributions(goal, current_user.api_key) %>
-
-    <div class="card_saver col-12">
-      <div class="card_header">
-        <div class="header_top">
-          <div class="card_name">
-            <h4 id= "goal_name">  <%= goal.name %> </h4>
-          </div>
-          <div class="card_numbers">
-            <div id="balance">
-
-             <h4 id="result">$<span class="animatednumber" data-max="<%= weeklyContribution[2].to_i.round %>">0</span></h4>
-
-            </div>
-            <div id="amount">
-             <p> of $<%= goal.amount %> </p>
-            </div>
-         </div>
+  <div class="card_saver col-12">
+    <div class="card_header">
+      <div class="header_top">
+        <div class="card_name">
+          <h4 id= "goal_name">  <%= goal.name %> </h4>
         </div>
-        <div class="card_progress">
-          <div class="progress">
-            <div class="progress-bar bg-warning progress-bar value-bar" data-max="<%= weeklyContribution[1] %>" role="progressbar"
-              aria-valuenow="<%= weeklyContribution[1] %>"
-              aria-valuemin="0" aria-valuemax="<%= goal.amount %>">
-              <%= image_tag("dollar-sign.svg", class: "dollar-icon")%>
-             </div>
+        <div class="card_numbers">
+          <div id="balance">
+            <h4 id="result">$<span class="animatednumber" data-max="<%= weeklyContribution[2].to_i.round %>">0</span></h4>
           </div>
-         <!--  <div id="value">100</div> -->
-        <div class="card_progress">
-          <%= render "due_date", due_date: goal.due_date, created: goal.created_at %>
+          <div id="amount">
+           <p> of $<%= goal.amount %> </p>
+          </div>
         </div>
+      </div>
+      <div class="card_progress">
+        <div class="progress">
+          <div class="progress-bar bg-primary progress-bar value-bar" data-max="<%= weeklyContribution[1] %>" role="progressbar"
+            aria-valuenow="<%= weeklyContribution[1] %>"
+            aria-valuemin="0" aria-valuemax="<%= goal.amount %>">
+            <%= image_tag("dollar-sign.svg", class: "dollar-icon")%>
+           </div>
+        </div>
+
+        <%= render "due_date", due_date: goal.due_date, created: goal.created_at %>
         <%= image_tag("time-icon.svg", class: "time-icon")%>
       </div>
+    </div>
+    <%= image_tag("dollar-bill.svg", class: "dollar-bill")%>
+    <div class="card_footer">
+      <div class="card_contributions">
+        <li><span class="animatednumber" data-max="<%= weeklyContribution[0] %>">0</span></li>
       </div>
-      <%= image_tag("dollar-bill.svg", class: "dollar-bill")%>
-      <div class="card_footer">
-        <div class="card_contributions">
-          <li>$<%= weeklyContribution[0] %> </li>
-        </div>
-        <div class="card_btn">
-          <%= link_to "Worth It?", calculator_path(:param1 => "#{goal.name}",
-          :param2 => "#{goal.due_date}",
-          :param3 => "#{goal.reason.description}",
-          :param4 => weeklyContribution[0]),
-          class: "submit mb-2" %>
-        </div>
+      <div class="btn btn-primary">
+        <%= link_to "Worth It?", calculator_path(:param1 => "#{goal.name}",
+        :param2 => "#{goal.due_date}",
+        :param3 => "#{goal.reason.description}",
+        :param4 => weeklyContribution[0]),
+        class: "submit mb-2" %>
       </div>
-      </div>
-      <% end %>
+    </div>
+  </div>
+  <% end %>
 </div>
 
 

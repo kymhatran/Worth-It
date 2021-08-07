@@ -2,12 +2,13 @@
 .home_title {
   text-align: center;
   color: #FF7A64;
+  font-family: $upfont;
 }
 
 .home_subheading {
   color: #FFF2EF;
   text-align: center;
-
+  font-family: $upfont;
 }
 .card_saver {
   background: white;
@@ -29,19 +30,34 @@
 .header_top {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 }
 
 .card_name {
+  display: flex;
  h4{
   font-size: 1.2rem;
  }
+}
+.card_title {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.card_subheading {
+  text-align: left;
+p{
+  margin-bottom: 0rem;
+  }
 }
 
 .card_numbers {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  p{
+    font-size: .8rem;
+  }
 }
 
 #balance {
@@ -51,15 +67,13 @@
    }
 }
 
-
-
-
 .card_progress {
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .progress {
-
+  border-radius: 10px;
+  height: .75rem;
 }
 
 #value {
@@ -68,7 +82,7 @@
 
 .dollar-icon {
   position: absolute;
-  top: 83px;
+  top: 75px;
   right: 15px;
   width: 22px;
   height: auto
@@ -76,7 +90,7 @@
 
 .time-icon {
   position: absolute;
-  top: 113px;
+  top: 100px;
   right: 25px;
   width: 22px;
   height: auto;
@@ -85,9 +99,18 @@
 .dollar-bill {
   position: absolute;
   left: 10px;
-  top: 160px;
+  top: 130px;
 }
 
+.dash_gif {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.piggy_bank {
+  width: 200px;
+}
 
 .card_footer {
  display: flex;
@@ -96,11 +119,21 @@
  width: 100%;
  margin-bottom: 16px;
  align-items: center;
+ h2{
+  margin: 0px;
+ }
+}
+
+.goal_builder_footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 .card_contributions {
   color: #404040;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   padding-left: 22px;
   right: 18px;
   z-index: 10;

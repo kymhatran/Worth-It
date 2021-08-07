@@ -42,11 +42,11 @@ document.addEventListener('turbolinks:load', () => {
   goalSaver();
   setTimeout(() => {
     progressBar();
-  }, 2000)
+  }, 500)
 
   setTimeout(() => {
     animateValue();
-  }, 2000)
+  }, 500)
 
 
 });
