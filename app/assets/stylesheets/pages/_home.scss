@@ -79,9 +79,15 @@
   font-size: 18px;
 }
 
+#dash-text {
+  a {
+    color: white;
+  }
+}
+
 .navbar {
   height: 62px;
-  background-color: $uporange;
+  background-color: $upnavy;
 }
 
 .navbar-jay {
@@ -96,4 +102,5 @@
 .logo {
   position: absolute;
   top: -5px;
+  padding-top: 5px;
 }
