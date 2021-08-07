@@ -14,3 +14,11 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+<<<<<<< Updated upstream
+=======
+$upfont: "Roboto", "sans-serif";
+
+h1, h2, h3, h4, h5, h6, p, button, a{
+  font-family: $upfont !important;
+}
+>>>>>>> Stashed changes

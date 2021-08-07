@@ -1,5 +1,202 @@
 //Front end code for the calculator builder
 
+<<<<<<< Updated upstream
 ul {
   list-style: none;
+=======
+// #list li::before {
+//   content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+//   color: $uporange; /* Change the color */
+//   font-weight: bold; /* If you want it to be bold */
+//   display: inline-block; /* Needed to add space between the bullet and the text */
+//   width: 1em; /* Also needed for space (tweak if needed) */
+//   margin-left: -1em; /* Also needed for space (tweak if needed) */
+// }
+
+
+.calc-builder {
+  background-color: $upnavy;
+  color:white;
+  font-family: $upfont;
+  font-size: 18px;
+
+  .goals-bg {
+    text-align: center;
+    background-color: #FFFFFF;
+    color: $upnavy;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  h1 {
+    color: $uporange;
+    font-family: $upfont;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+  }
+
+ // h2{
+ //    color: $upyellow;
+ //    margin-top: 10px;
+ //    margin-bottom: 10px;
+ //  }
+
+  #due_date {
+    font-size: 18px;
+    border-radius: 15px;
+    background-color: $upnavy;
+    color: white;
+    margin-bottom: 10px;
+    padding: 5px;
+    padding-left: 7px;
+  }
+
+  #goal_reason {
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+  }
+
+  #weekly-contribution {
+    font-size: 18px;
+    display: flex;
+    max-width: fit-content;
+  }
+
+  .wc {
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    border-radius: 15px;
+    background-color: $upyellow;
+    color: $upnavy;
+    margin-bottom: 10px;
+    padding: 5px;
+    padding-left: 7px;
+  }
+
+  .dollar {
+    font-size: 18px;
+    display: flex;
+    margin-left: auto;
+  }
+
+  #purchase_form {
+   width: 100%;
+   text-align:left;
+
+    input[type=text] {
+      border: 3px solid $uporange;
+      border-radius: 15px;
+      padding-left: 10px;
+      font-size: 18px;
+      width: 100%;
+    }
+  }
+
+  .purchase, .cost {
+    font-size: 18px;
+  }
+}
+
+.submit {
+  text-decoration: none;
+  background-color: #FF7A64;
+  color: $upnavy;
+  padding: 8px;
+  border-radius: 4px;
+  // transition: 0.1s;
+  border:none;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.calc-results {
+  margin-top: 20px;
+  justify-content: center;
+  line-height: 1.6;
+  width: 100%;
+}
+
+#heading {
+  color: $upyellow;
+  font-weight: bold;
+}
+
+#heading {
+    // animation: 0.3s steps(3) 0.25s 1 normal forwards running gZwMMG;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDojRkY3QTY0O308L3N0eWxlPjwvZGVmcz48dGl0bGU+dGV4dCBoaWdobGlnaHQgYmFja2dyb3VuZCBvcmFuZ2U8L3RpdGxlPjxyZWN0IGNsYXNzPSJhIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIvPjwvc3ZnPgo=);
+    background-position: 0px 55px;
+    // background-repeat: repeat-x;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    will-change: background-position;
+    // -webkit-box-decoration-break: clone;
+}
+
+#impact {
+  font-size: 20px;
+}
+
+
+#list li{
+font-size: 20px;
+}
+
+#list .list-item{
+    list-style-image: none;
+    padding: 0px 0px 0px 2.2rem;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI3IiBjeT0iNyIgcj0iNyIgZmlsbD0iI0ZGRUY2QiIvPjwvc3ZnPgo=");
+    background-position: 0px 6px;
+    background-repeat: no-repeat;
+}
+
+#context{
+ font-size: 19px;
+ margin: 0;
+
+}
+
+#visual{
+  font-size: 50px;
+}
+
+// .btn {
+//   // position: absolute;
+//   color: $upnavy;
+//   background-color: $upyellow;
+//   border-radius: 4px;
+//   font-family: $upfont;
+//   font-size: 18px;
+//   border-style: solid;
+//   border-color: $upyellow;
+//   // height: 40px;
+//   // weight: 65px;
+//   margin-right: 10px;
+//   // left: 76px;
+//   // transition: 0.1s;
+//   // font-weight: bold;
+
+//   &:hover {
+//     font-weight: 900;
+//     background-color: rgb(247, 231, 111);
+//     color: white;
+//     border-width: 1px;
+//     // height: 40px;
+//     // width: 65px;
+//   }
+// }
+
+.impact-btns {
+  display: none;
+  justify-content: flex-end;
+>>>>>>> Stashed changes
 }

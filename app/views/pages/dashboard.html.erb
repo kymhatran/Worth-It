@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <div class="p-3 mb-2 bg-primary">
   <h1>Dashboard</h1>
 
@@ -6,5 +7,37 @@
   </div>
   <div class="goal_cards">
     <%= render "goal_summary" %>
+=======
+
+<div class="p-3 mb-2 bg-secondary">
+  <div class="home_title">
+    <h1>Worth It?</h1>
+  </div>
+  <div class="home_subheading">
+    <p> Powered by UP Bank but in no way affiliated with them</p>
+  </div>
+  <div class="container_600">
+    <div class="goal_cards">
+      <%= render "goal_summary" %>
+    </div>
+    <div class="dash_gif">
+      <%= image_tag("piggy_bank.gif", class: "piggy_bank")%>
+    </div>
+    <div class="card_saver col-12">
+      <div class="card_header">
+        <div class="header_top">
+          <div class="card_name">
+            <h4>🧠 Check It Before You Wreck It</h4>
+          </div>
+        </div>
+        <div class="card_subheading">
+          <p>Add your UP Saver to Worth It</p>
+        </div>
+      </div>
+      <div class="goal_builder_footer">
+        <%= link_to "Add My Account", goal_builder_path, class: "btn btn-warning" %>
+      </div>
+    </div>
+>>>>>>> Stashed changes
   </div>
 </div>

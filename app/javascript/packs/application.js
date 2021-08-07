@@ -36,4 +36,16 @@ document.addEventListener('turbolinks:load', () => {
   initflatpickr();
   calculator();
   goalSaver();
+<<<<<<< Updated upstream
+=======
+  setTimeout(() => {
+    progressBar();
+  }, 500)
+
+  setTimeout(() => {
+    animateValue();
+  }, 500)
+
+
+>>>>>>> Stashed changes
 });
