@@ -6,6 +6,8 @@ function askAgainButton() {
   const context = document.getElementById("context")
   const days_reason = document.getElementById("days_reason")
   const visual = document.getElementById("visual")
+  const whatToBuy = document.getElementById("what-to-buy");
+  const whatIsCost = document.getElementById("what-is-cost");
 
     if (again) {
       again.addEventListener("click",() =>  {
@@ -16,6 +18,8 @@ function askAgainButton() {
         days_reason.innerHTML=""
         visual.innerHTML=""
         again.classList.add("d-none")
+        whatToBuy.value= ""
+        whatIsCost.value= ""
       })
     }
 
