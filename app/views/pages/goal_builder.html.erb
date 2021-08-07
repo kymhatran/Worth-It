@@ -40,7 +40,7 @@
         <p id="weeks">0.00</p>
       </div>
       <%= f.simple_fields_for :reason, Reason.new do |p| %>
-        <%= p.input :description, :input_html => { class: 'form-style'}, label: "Why are you saving for this goal?", placeholder: ["I need to avoid...a mid-life crisis", "I want to people to...be jealous of me", "I strive to be...financially secure"].sample%>
+        <%= p.input :description, :input_html => { class: 'form-style'}, label: "Why are you saving for this goal?", placeholder: ["I need to avoid a mid-life crisis", "I want to be financially secure"].sample%>
       <% end %>
     <%= f.submit "Hell Yeah", class: "btn btn-warning"%>
   <% end %>

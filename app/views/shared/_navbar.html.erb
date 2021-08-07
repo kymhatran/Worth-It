@@ -3,6 +3,7 @@
     <%= image_tag("LOGO.png", class: "logo")%>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_ystsffqy.json", class="px-2",background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop autoplay></lottie-player>
+    <%= image_tag("Worth-it.png", class: "worth-it")%>
   </div>
 </div>
 
@@ -16,17 +17,19 @@
   <ul class="row mx-auto">
     <% if user_signed_in? %>
       <li class="nav-item mr-3">
-        <p><%= link_to "Dashboard", dashboard_path %></p>
+        <p id='dash-text'><%= link_to "Dashboard", dashboard_path %></p>
       </li>
       <li class="nav-item mr-3">
-        <p><%= link_to "Build A Goal", goal_builder_path %></p>
+        <p id='dash-text'><%= link_to "Build A Goal", goal_builder_path %></p>
       </li>
       <li class="nav-item mr-3">
-        <p><%= link_to "Log out", destroy_user_session_path, method: :delete %></p>
+        <p id='dash-text'><%= link_to "Log out", destroy_user_session_path, method: :delete %></p>
       </li>
     <% else %>
       <li class="nav-item mr-3">
-        <%= link_to "Login", new_user_session_path %>
+        <p id='dash-text'>
+          <%= link_to "Login", new_user_session_path %>
+        <p>
       </li>
     <% end %>
   </ul>

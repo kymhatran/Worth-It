@@ -47,7 +47,7 @@
 
   #due_date {
     font-size: 18px;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: $upnavy;
     color: white;
     margin-bottom: 10px;
@@ -72,7 +72,7 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: $upyellow;
     color: $upnavy;
     margin-bottom: 10px;
@@ -92,7 +92,7 @@
 
     input[type=text] {
       border: 3px solid $uporange;
-      border-radius: 15px;
+      border-radius: 10px;
       padding-left: 10px;
       font-size: 18px;
       width: 100%;
@@ -154,12 +154,12 @@ font-size: 20px;
     list-style-image: none;
     padding: 0px 0px 0px 2.2rem;
     background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI3IiBjeT0iNyIgcj0iNyIgZmlsbD0iI0ZGRUY2QiIvPjwvc3ZnPgo=");
-    background-position: 0px 6px;
+    background-position: 0px 10px;
     background-repeat: no-repeat;
 }
 
 #context{
- font-size: 19px;
+ font-size: 20px;
  margin: 0;
 
 }
@@ -199,7 +199,7 @@ font-size: 20px;
   justify-content: flex-end;
 }
 
-// @media screen {
-//   max-width:320px;
-// }
+.form-colour {
+  color: white;
+}
 

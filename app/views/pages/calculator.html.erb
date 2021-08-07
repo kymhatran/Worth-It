@@ -28,9 +28,12 @@
 
       <form id="purchase_form">
         <label class= "purchase" for="purchase">What do you want to buy?</label><br>
-        <input type="text" class="purchase mb-2" name="purchase"><br>
+        <input id="what-to-buy" type="text" class="purchase mb-2" name="purchase"><br>
         <label class= "cost mt-2" for="cost">How much does it cost?</label><br>
-        <input type="text" class="cost" name="cost">
+        <input id= "what-is-cost" type="text" class="cost" name="cost">
+        <input type="text" class="purchase mb-2" name="purchase" autocomplete="off"><br>
+        <label class= "cost mt-2" for="cost">How much does it cost?</label><br>
+        <input type="text" class="cost" name="cost" autocomplete="off">
           <div class= "mt-3 d-flex justify-content-end">
             <%= link_to "Back", dashboard_path, class: "btn" %>
             <input class= "submit" type="submit" value="Is it worth it?!">
@@ -48,7 +51,7 @@
           <p id= "context"></p>
           <p id="visual"><p>
         <div class="impact-btns">
-          <%= link_to "Ask me again", calculator_path, class: "submit" %>
+          <button id= "again" class="submit"> Ask me again </button>
         </div>
     </div>
 

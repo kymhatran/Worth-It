@@ -79,16 +79,26 @@
   font-size: 18px;
 }
 
+#dash-text {
+  a {
+    color: white;
+  }
+}
+
 .navbar {
   height: 62px;
-  background-color: $uporange;
+  background-color: $upnavy;
 }
 
 .navbar-jay {
   padding-top: 2px;
+  position: relative;
+  left: -30px;
   // height: 10px !important;
   padding-bottom: 5px;
   @media (min-width:320px) {
+      position: relative;
+    left: -15px;
     height: 30px !important;
   }
 }
@@ -96,4 +106,19 @@
 .logo {
   position: absolute;
   top: -5px;
+  padding-top: 5px;
 }
+
+// .row {
+//   height: 10em;
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: center;
+//   @media (min-width:320px) {
+//     position: absolute;
+//     left: 7px;
+//     top: 10px;
+//   }
+
+// }

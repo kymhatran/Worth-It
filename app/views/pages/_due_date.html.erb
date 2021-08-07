@@ -5,11 +5,10 @@
 <% goal_end = created_to_end_date(created, due_date) %>
 
 <!-- calculation for the percentage of days past from start, today, end of goal -->
-<% per = (((goal_end.to_f - no_days.to_f) / goal_end.to_f) * 100).round %>
-
+<% per = ((goal_end.to_f - no_days.to_f) / goal_end) * 100 %>
 <!-- Bootstrap progress bar for date of goal -->
 <div class="progress mt-2">
-  <div class="progress-bar bg-dark" role="progressbar"
-       style="width: <%= per %>%;" aria-valuenow="<%= per %>"
+  <div class="progress-bar bg-dark date-bar" role="progressbar" data-date="<%= per %>"
+        aria-valuenow="<%= per %>"
        aria-valuemin="0" aria-valuemax="<%= goal_end%>"></div>
 </div>
