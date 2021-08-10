@@ -29,7 +29,7 @@ function calculator() {
       const object= [
       [`☕️`, 5, "coffees served by a bearded Fitzroy hipster"],
       [`🍹`, 10, "Aperol Spritzes."],
-      [`🍕`, 25, "one large pizza from Crust."],
+      [`🍕`, 25, "large pizzas from Crust."],
       [`🥃`, 10, "shots of patron."],
       [`🥖`, 7, "loaves of Baker's Delight bread."],
       [`🥑`, 10, "servings of smashed avo."],
@@ -74,8 +74,8 @@ function calculator() {
               setback.innerHTML = `You'll need to wait another ${calculatedImpact} days to achieve your goal`
               days_reason.innerHTML = `That's ${calculatedImpact} days longer you're whinging ${goal_reason}`
             } else {
-              setback.innerHTML = `You'll only need to wait another ${calculatedImpact} days to achieve your goal`
-              days_reason.innerHTML = `That's only ${calculatedImpact} days longer you're whinging ${goal_reason}`
+              setback.innerHTML = `It'll only set you back by less than a week to achieve your goal`
+              days_reason.innerHTML = `That's only a few days longer you're whinging ${goal_reason}`
             }
 
 
