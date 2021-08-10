@@ -90,13 +90,13 @@
    width: 100%;
    text-align:left;
 
-    input[type=text] {
-      border: 3px solid $uporange;
-      border-radius: 10px;
-      padding-left: 10px;
-      font-size: 18px;
-      width: 100%;
-    }
+    // input[type=text] {
+    //   border: 3px solid $uporange;
+    //   border-radius: 10px;
+    //   padding-left: 10px;
+    //   font-size: 18px;
+    //   width: 100%;
+    // }
   }
 
   .purchase, .cost {
@@ -148,6 +148,7 @@
 
 #list li{
 font-size: 20px;
+margin-left: -14px;
 }
 
 #list .list-item{
