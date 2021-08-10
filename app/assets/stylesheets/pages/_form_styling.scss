@@ -3,7 +3,7 @@
   border-color: $uporange;
   border-width: 3px;
   // background-image: -moz-linear-gradient(center bottom, $uporange 33%, $uppink 67% );
-  padding-left: 10px;
+  padding-left: 4px;
   padding-top: 5px;
   // border-image: linear-gradient(to left, #00C853, #B2FF59);
   // border-image: -webkit-linear-gradient(left bottom, right top,$uporange, $uppink) !important;
@@ -25,4 +25,10 @@
 .new_goal {
   font-family: $upfont;
   font-size: 18px;
+  label {
+    padding-left: 10px;
+  }
+  .flatpickr-input {
+    padding-left: 6px;
+  }
 }
