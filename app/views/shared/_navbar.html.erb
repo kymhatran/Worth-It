@@ -1,35 +1,37 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%#= link_to "#", class: "navbar-brand" do %>
   <div class="d-flex">
     <%= image_tag("LOGO.png", class: "logo")%>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_ystsffqy.json", class="px-2",background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop autoplay></lottie-player>
-  </div>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <strong><%= link_to "HOME", root_path, class: "nav-link" %></strong>
-        </li>
-        <li class="nav-item dropdown">
-          <%= navbar_photo(current_user) %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Transactions", transactions_path, class: "dropdown-item" %>
-            <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
+    <%= image_tag("Worth-it.png", class: "worth-it")%>
   </div>
 </div>
+
+<!--   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav"> -->
+
+<div class="navbar navbar-expand-sm navbar-light navbar-jay">
+  <ul class="row mx-auto">
+    <% if user_signed_in? %>
+      <li class="nav-item mr-3">
+        <p id='dash-text'><%= link_to "Dashboard", dashboard_path %></p>
+      </li>
+      <li class="nav-item mr-3">
+        <p id='dash-text'><%= link_to "Build A Goal", goal_builder_path %></p>
+      </li>
+      <li class="nav-item mr-3">
+        <p id='dash-text'><%= link_to "Log out", destroy_user_session_path, method: :delete %></p>
+      </li>
+    <% else %>
+      <li class="nav-item mr-3">
+        <p id='dash-text'>
+          <%= link_to "Login", new_user_session_path %>
+        <p>
+      </li>
+    <% end %>
+  </ul>
+</div>
+

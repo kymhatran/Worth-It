@@ -2,6 +2,7 @@
     font-size: 18px;
     display: flex;
     max-width: fit-content;
+    font-family: $upfont;
 }
 .balance {
     margin-top: 10px;
@@ -9,15 +10,29 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    height: 100%;
-    border-radius: 6px;
-    background-color: #C7C9C9;
-    color: $upnavy;
+    height: 35px;
+    border-radius: 10px;
+    background: $uporange;
     margin-bottom: 10px;
-    padding: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-family: $upfont;
+    padding-right: 5px;
 }
 .dollar {
     font-size: 18px;
     display: flex;
     margin-left: auto;
+    font-family: $upfont;
+}
+
+.card {
+    border-radius: 15px !important;
+}
+
+.quotes {
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    color: white;
 }

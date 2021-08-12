@@ -13,19 +13,21 @@ ul {
 //   margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
+
 .calc-builder {
   background-color: $upnavy;
   color:white;
   font-family: $upfont;
-  font-weight: bold;
+  font-size: 18px;
 
   .goals-bg {
     text-align: center;
     background-color: #FFFFFF;
     color: $upnavy;
-    border-radius: 6px;
+    border-radius: 15px;
     padding: 10px;
     margin-top: 10px;
+    font-size: 18px;
   }
 
   h1 {
@@ -35,6 +37,7 @@ ul {
     font-weight: 300;
     font-size: 32px;
     line-height: 37px;
+    text-align: center;
   }
 
  // h2{
@@ -45,17 +48,19 @@ ul {
 
   #due_date {
     font-size: 18px;
-    border-radius: 6px;
+    border-radius: 10px;
     background-color: $upnavy;
     color: white;
     margin-bottom: 10px;
     padding: 5px;
+    padding-left: 7px;
   }
 
-  // #goal_reason {
-  //   font-size: 18px;
-  //   font-style: italic;
-  // }
+  #goal_reason {
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+  }
 
   #weekly-contribution {
     font-size: 18px;
@@ -68,11 +73,12 @@ ul {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    border-radius: 6px;
+    border-radius: 10px;
     background-color: $upyellow;
     color: $upnavy;
     margin-bottom: 10px;
     padding: 5px;
+    padding-left: 7px;
   }
 
   .dollar {
@@ -85,44 +91,33 @@ ul {
    width: 100%;
    text-align:left;
 
-    input[type=text] {
-      border: 1px solid $uporange;
-      border-radius: 4px;
-      padding: 5px;
-      width: 100%;
-    }
+    // input[type=text] {
+    //   border: 3px solid $uporange;
+    //   border-radius: 10px;
+    //   padding-left: 10px;
+    //   font-size: 18px;
+    //   width: 100%;
+    // }
   }
 
-  .purchase {
-    font-size: 18px;
-  }
-
-  .cost {
+  .purchase, .cost {
     font-size: 18px;
   }
 }
 
-  // .submit {
-  //   color: white;
-  //   background-color: $uporange;
-  //   border-radius: 4px;
-  //   border-style: solid;
-  //   border-color: $uporange;
-  //   font-size: 15px;
-  //   font-family: $upfont;
-  //   // font-weight: bolder;
-  //   height: 35px;
-  //   // left: 76px;
-  //   transition: 0.3s;
-
-  //   &:hover {
-  //     background-color: #FFFFFF;
-  //     color: $uporange;
-  //     font-family: $upfont;
-  //     height: 35px;
-  //     opacity: 1
-  //   }
-  // }
+.submit {
+  text-decoration: none;
+  background-color: #FF7A64;
+  color: $upnavy;
+  padding: 8px;
+  border-radius: 2px;
+  // transition: 0.1s;
+  border:none;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
 
 .calc-results {
   margin-top: 20px;
@@ -154,18 +149,19 @@ ul {
 
 #list li{
 font-size: 20px;
+margin-left: -14px;
 }
 
 #list .list-item{
     list-style-image: none;
     padding: 0px 0px 0px 2.2rem;
     background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI3IiBjeT0iNyIgcj0iNyIgZmlsbD0iI0ZGRUY2QiIvPjwvc3ZnPgo=");
-    background-position: 0px 6px;
+    background-position: 0px 10px;
     background-repeat: no-repeat;
 }
 
 #context{
- font-size: 19px;
+ font-size: 20px;
  margin: 0;
 
 }
@@ -174,28 +170,33 @@ font-size: 20px;
   font-size: 50px;
 }
 
-.btn {
-  // position: absolute;
-  color: $uporange;
-  background-color: white;
-  border-radius: 4px;
-  font-family: $upfont;
-  border-style: solid;
-  border-color: $uporange;
-  height: 35px;
-  margin-right: 10px;
-  // left: 76px;
-  transition: 0.1s;
-  // font-weight: bold;
+// .btn {
+//   // position: absolute;
+//   color: $uporange;
+//   background-color: white;
+//   border-radius: 4px;
+//   font-family: $upfont;
+//   border-style: solid;
+//   border-color: $uporange;
+//   height: 35px;
+//   margin-right: 10px;
+//   // left: 76px;
+//   transition: 0.1s;
+//   // font-weight: bold;
 
-  &:hover {
-    font-weight: 900;
-    color: $uporange;
-    border-width: 2px;
-    height: 35px;
-  }
-}
+//   &:hover {
+//     font-weight: 900;
+//     color: $uporange;
+//     border-width: 2px;
+//     height: 35px;
+//   }
+// }
+
 .impact-btns {
   display: none;
   justify-content: flex-end;
+}
+
+.form-colour {
+  color: white;
 }

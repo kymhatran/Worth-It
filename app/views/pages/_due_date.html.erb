@@ -1,12 +1,14 @@
-<% no_weeks = num_weeks(due_date) %>
+<!-- Gets number of days till due date from today -->
+<% no_days = num_days(due_date) %>
 
+<!-- Number of days between start of goal and end -->
 <% goal_end = created_to_end_date(created, due_date) %>
 
-<% percentage = percentage_of_goal_amount(no_weeks, goal_end) %>
-
-
+<!-- calculation for the percentage of days past from start, today, end of goal -->
+<% per = ((goal_end.to_f - no_days.to_f) / goal_end) * 100 %>
+<!-- Bootstrap progress bar for date of goal -->
 <div class="progress mt-2">
-  <div class="progress-bar bg-dark" role="progressbar"
-       style="width: <%= percentage %>%;" aria-valuenow="<%= percentage %>"
+  <div class="progress-bar bg-dark date-bar" role="progressbar" data-date="<%= per %>"
+        aria-valuenow="<%= per %>"
        aria-valuemin="0" aria-valuemax="<%= goal_end%>"></div>
 </div>
