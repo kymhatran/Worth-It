@@ -1,18 +1,36 @@
-<div class="p-3 mb-2 bg-primary">
+
+<div class="p-3 mb-2 bg-secondary">
   <div class="home_title">
-    <h1>Worth It?</h1>
+    <h1>Your Da$hboard</h1>
+    </div>
+    <div class="home_subheading">
+      <p> Turn your cents into centuries -- it's Worth It.</p>
+    </div>
+  <div class="container_600">
+    <div class="goal_cards">
+      <%= render "goal_summary" %>
+    </div>
+    <div class="dash_gif">
+      <%= image_tag("piggy_bank.gif", class: "piggy_bank")%>
+    </div>
+    <div class="card_saver col-12">
+      <div class="card_header">
+        <div class="header_top">
+          <div class="card_name">
+            <h4>➕ Add Your UP Saver to Worth It</h4>
+          </div>
+          <div class="double_dollars">
+            <%= image_tag("double_dollars", class: "double_dollars")%>
+          </div>
+        </div>
+      </div>
+      <div class="goal_builder_footer">
+        <%= link_to "Add Saver", goal_builder_path, class: "btn btn-warning" %>
+      </div>
+    </div>
+    <div class="dashboard_footer">
+      <p><strong> Worth It</strong> is designed, developed and delivered by a bunch of Le Wagon Melbourne students
+      and is obviously not affiliatetd with Up or Ferocia Pty Ltd, but prob should be lezbehonest.</p>
+    </div>
   </div>
-  <div class="home_subheading">
-    <p> Powered by UP Bank but in no way affiliated with them</p>
-  </div>
-
-  <div class="goal_cards">
-    <%= render "goal_summary" %>
-  </div>
-
-  <div class="card mb-3 mx-auto col-md-4 py-3 shadow-sm rounded">
-    <p>Yo, attach your saver account Worth It!</p>
-    <h2><%= link_to "Build A Goal", goal_builder_path, class: "btn btn-warning" %></h2>
-  </div>
-
 </div>

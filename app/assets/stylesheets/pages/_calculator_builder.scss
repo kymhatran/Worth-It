@@ -2,7 +2,8 @@
 // #list {
 //   list-style: none; /* Remove default bullets */
 // }
-
+ul {
+  list-style: none;
 // #list li::before {
 //   content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
 //   color: $uporange; /* Change the color */
@@ -10,7 +11,7 @@
 //   display: inline-block; /* Needed to add space between the bullet and the text */
 //   width: 1em; /* Also needed for space (tweak if needed) */
 //   margin-left: -1em; /* Also needed for space (tweak if needed) */
-// }
+}
 
 .calc-builder {
   background-color: $upnavy;
@@ -194,9 +195,7 @@ font-size: 20px;
     height: 35px;
   }
 }
-
 .impact-btns {
   display: none;
   justify-content: flex-end;
 }
-
