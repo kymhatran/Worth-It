@@ -2,7 +2,8 @@
 // #list {
 //   list-style: none; /* Remove default bullets */
 // }
-
+ul {
+  list-style: none;
 // #list li::before {
 //   content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
 //   color: $uporange; /* Change the color */
@@ -10,7 +11,7 @@
 //   display: inline-block; /* Needed to add space between the bullet and the text */
 //   width: 1em; /* Also needed for space (tweak if needed) */
 //   margin-left: -1em; /* Also needed for space (tweak if needed) */
-// }
+}
 
 
 .calc-builder {
@@ -171,27 +172,23 @@ margin-left: -14px;
 
 // .btn {
 //   // position: absolute;
-//   color: $upnavy;
-//   background-color: $upyellow;
+//   color: $uporange;
+//   background-color: white;
 //   border-radius: 4px;
 //   font-family: $upfont;
-//   font-size: 18px;
 //   border-style: solid;
-//   border-color: $upyellow;
-//   // height: 40px;
-//   // weight: 65px;
+//   border-color: $uporange;
+//   height: 35px;
 //   margin-right: 10px;
 //   // left: 76px;
-//   // transition: 0.1s;
+//   transition: 0.1s;
 //   // font-weight: bold;
 
 //   &:hover {
 //     font-weight: 900;
-//     background-color: rgb(247, 231, 111);
-//     color: white;
-//     border-width: 1px;
-//     // height: 40px;
-//     // width: 65px;
+//     color: $uporange;
+//     border-width: 2px;
+//     height: 35px;
 //   }
 // }
 
@@ -203,4 +200,3 @@ margin-left: -14px;
 .form-colour {
   color: white;
 }
-
