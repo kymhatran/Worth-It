@@ -1,6 +1,6 @@
 # Description
 
-Worth-it is an application that shows you the impact of your financial decisions before you make them, it links to your UP account using your UP API key. 
+Worth-it is an application that shows you the impact of your financial decisions before you make them, it links to your UP account using your unique UP API key. 
 It is an application unlike other banking apps, which show you the damage once it's done. 
 
 # Installation
