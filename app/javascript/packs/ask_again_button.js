@@ -8,6 +8,7 @@ function askAgainButton() {
   const visual = document.getElementById("visual")
   const whatToBuy = document.getElementById("what-to-buy");
   const whatIsCost = document.getElementById("what-is-cost");
+  const submit = document.getElementById("submit")
 
     if (again) {
       again.addEventListener("click",() =>  {
@@ -20,6 +21,7 @@ function askAgainButton() {
         again.classList.add("d-none")
         whatToBuy.value= ""
         whatIsCost.value= ""
+        submit.disabled = false
       })
     }
 
